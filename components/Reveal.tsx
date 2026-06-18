@@ -40,8 +40,10 @@ export default function Reveal({
   return (
     <div
       ref={ref}
-      className={`transition-all duration-700 ease-out transform ${
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
+      className={`transition-all duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)] transform will-change-transform ${
+        isVisible
+          ? "opacity-100 translate-y-0 blur-0"
+          : "opacity-0 translate-y-10 blur-[6px]"
       } ${className}`}
     >
       {children}

@@ -23,7 +23,7 @@ export default function AdmissionModal() {
 
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fade-in">
-      <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full relative overflow-hidden animate-zoom-in">
+      <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full relative overflow-hidden animate-modal-drop">
         
         {/* Close Button (Top Left as per reference) */}
         <button
@@ -35,32 +35,24 @@ export default function AdmissionModal() {
         </button>
 
         {/* Content */}
-        <div className="p-8 pb-0 text-center">
-          {/* Tagline */}
-          <p className="text-green-600 italic font-medium text-sm mb-3">
-            Equipping Students for Life
-          </p>
-
-          {/* School Name */}
-          <h2 className="text-3xl font-bold mb-1 leading-tight">
-            <span className="text-red-600">శ్రీశ్రీ</span>{" "}
-            <span className="text-blue-700">ఎడ్యుకేషనల్ సొసైటీ</span>
-          </h2>
-          <h3 className="text-red-600 font-bold uppercase tracking-wider text-xs mb-3">
-            The Pride of Eluru Schools
-          </h3>
-
-          {/* Address */}
-          <p className="text-blue-700 text-sm font-medium mb-6">
-            Sriram Nagar 10th Road, S.V. Peta, Eluru, 534003
-          </p>
+        <div className="p-5 sm:p-8 pb-0 text-center">
+          {/* School Banner (exact branding from the official banner) */}
+          <div className="relative w-full mb-6 animate-fade-in-up" style={{ aspectRatio: "910 / 186", animationDelay: "0.25s" }}>
+            <Image
+              src="/banner-text.png"
+              alt="Sree Sree Educational Society — Equipping Students for Life — The Pride of Eluru Schools, Sriram Nagar 10th Road, S.V. Peta, Eluru, 534003"
+              fill
+              className="object-contain"
+              priority
+            />
+          </div>
 
           {/* Admissions Banner */}
-          <div className="bg-yellow-400 rounded-xl p-5 mb-0 relative overflow-hidden">
+          <div className="bg-yellow-400 rounded-xl p-5 mb-0 relative overflow-hidden animate-pop-in" style={{ animationDelay: "0.45s" }}>
             {/* Decorative confetti-like dots */}
-            <div className="absolute top-2 right-4 w-2 h-2 bg-purple-400 rounded-full opacity-60" />
-            <div className="absolute top-4 right-8 w-1.5 h-1.5 bg-pink-400 rounded-full opacity-60" />
-            <div className="absolute bottom-3 left-4 w-2 h-2 bg-blue-400 rounded-full opacity-60" />
+            <div className="absolute top-2 right-4 w-2 h-2 bg-purple-400 rounded-full opacity-60 animate-float-slow" />
+            <div className="absolute top-4 right-8 w-1.5 h-1.5 bg-pink-400 rounded-full opacity-60 animate-float-slow" style={{ animationDelay: "1.2s" }} />
+            <div className="absolute bottom-3 left-4 w-2 h-2 bg-blue-400 rounded-full opacity-60 animate-float-slow" style={{ animationDelay: "0.6s" }} />
             
             <p className="text-red-700 font-extrabold text-xl tracking-wide mb-1">
               ADMISSIONS OPEN
@@ -75,7 +67,7 @@ export default function AdmissionModal() {
         </div>
 
         {/* School Building Image */}
-        <div className="relative w-full h-48 mt-0">
+        <div className="relative w-full h-48 mt-0 animate-fade-in-up" style={{ animationDelay: "0.6s" }}>
           <Image
             src="/IMG-20260615-WA0046.jpg"
             alt="School Campus"

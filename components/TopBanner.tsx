@@ -29,12 +29,12 @@ export default function TopBanner() {
         isVisible ? "max-h-48 opacity-100" : "max-h-0 opacity-0"
       }`}
     >
-      <div className="relative w-full h-32 md:h-40 bg-yellow-50">
+      <div className="relative w-full h-20 sm:h-28 md:h-40 bg-yellow-50">
         <Image
           src="/top-banner.png"
           alt="Sree Sree Educational Society Banner"
           fill
-          className="object-cover md:object-contain md:object-center"
+          className="object-contain object-center"
           priority
         />
       </div>

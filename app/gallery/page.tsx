@@ -65,10 +65,10 @@ export default function Gallery() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative h-[400px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[320px] sm:h-[400px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&q=80&w=2000"
+            src="/1000228463.jpg"
             alt="Gallery"
             fill
             className="object-cover animate-ken-burns"

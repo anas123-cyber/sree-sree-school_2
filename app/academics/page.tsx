@@ -1,13 +1,23 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ChevronRight, BookOpen, Sparkles, GraduationCap, Phone } from "lucide-react";
+import { ChevronRight, BookOpen, Sparkles, GraduationCap, Phone, Dumbbell, Palette, FlaskConical, HeartHandshake } from "lucide-react";
 import Reveal from "@/components/Reveal";
+import FeatureGrid from "@/components/FeatureGrid";
+
+const offerings = [
+  { icon: BookOpen, title: "Academic Excellence", desc: "Strong fundamentals and exam readiness from Primary through High School." },
+  { icon: Sparkles, title: "Yoga & Pranayama", desc: "Daily practice for focus, calm, and inner well-being." },
+  { icon: Dumbbell, title: "Sports & Fitness", desc: "A spacious playground and coaching that build teamwork and health." },
+  { icon: Palette, title: "Arts & Culture", desc: "Music, art, and celebrations that nurture creativity and confidence." },
+  { icon: FlaskConical, title: "Science & Computer Labs", desc: "Hands-on labs and digital skills for curious young minds." },
+  { icon: HeartHandshake, title: "Character & Values", desc: "Discipline, compassion, and citizenship at the heart of learning." },
+];
 
 export default function Academics() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative h-[400px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[320px] sm:h-[400px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src="/1000228463.jpg"
@@ -37,9 +47,26 @@ export default function Academics() {
         </div>
       </section>
 
+      {/* What We Offer — bordered feature grid */}
+      <Reveal>
+        <section className="py-14 sm:py-20 px-4 bg-white">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <div className="flex items-center justify-center gap-4 mb-2">
+                <div className="h-px w-12 bg-accent" />
+                <span className="text-accent font-bold uppercase tracking-wider text-sm">What We Offer</span>
+                <div className="h-px w-12 bg-accent" />
+              </div>
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary">A well-rounded education</h2>
+            </div>
+            <FeatureGrid items={offerings} />
+          </div>
+        </section>
+      </Reveal>
+
       {/* Primary School */}
       <Reveal>
-        <section className="py-20 px-4">
+        <section className="py-14 sm:py-20 px-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
               <div className="group relative rounded-2xl overflow-hidden shadow-lg h-80">
@@ -162,7 +189,7 @@ export default function Academics() {
 
       {/* Whole Child Section */}
       <Reveal>
-        <section className="py-20 px-4 bg-primary text-white">
+        <section className="py-14 sm:py-20 px-4 bg-primary text-white">
           <div className="max-w-6xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4">Education for the <span className="text-accent">whole child</span></h2>
             <p className="text-gray-300 max-w-2xl mx-auto mb-12">
@@ -188,7 +215,7 @@ export default function Academics() {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="bg-accent text-white px-8 py-3.5 rounded-full font-semibold hover:bg-amber-600 transition-all flex items-center justify-center gap-2">
+              <Link href="/contact" className="bg-accent text-white px-8 py-3.5 rounded-full font-semibold hover:bg-amber-600 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 flex items-center justify-center gap-2">
                 Apply for Admission <ChevronRight className="w-5 h-5" />
               </Link>
               <Link href="/contact" className="bg-white text-primary border-2 border-white px-8 py-3.5 rounded-full font-semibold hover:bg-gray-100 transition-all flex items-center justify-center gap-2">

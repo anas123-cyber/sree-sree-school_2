@@ -1,13 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ChevronRight, Target, Eye, Heart, Trophy, BookOpen, Users, Sparkles, Medal, Clock } from "lucide-react";
+import { ChevronRight, Heart, Trophy, BookOpen, Users, Sparkles, Medal, Clock } from "lucide-react";
 import Reveal from "@/components/Reveal";
 
 export default function About() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative h-[400px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[320px] sm:h-[400px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src="/1000228463.jpg"
@@ -34,7 +34,7 @@ export default function About() {
 
       {/* Chairman Profile */}
       <Reveal>
-        <section className="py-20 px-4">
+        <section className="py-14 sm:py-20 px-4">
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-start">
             <div className="relative">
               <Image
@@ -42,7 +42,7 @@ export default function About() {
                 alt="Dr. M.B.S. Sarma"
                 width={500}
                 height={600}
-                className="rounded-2xl shadow-lg"
+                className="rounded-2xl shadow-lg w-full h-auto"
               />
               <div className="absolute top-4 left-4 bg-accent text-white text-xs font-bold px-3 py-1 rounded-full">
                 FOUNDER & CHAIRMAN
@@ -84,7 +84,7 @@ export default function About() {
 
       {/* Timeline */}
       <Reveal>
-        <section className="py-20 px-4 bg-white">
+        <section className="py-14 sm:py-20 px-4 bg-white">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-4">Empowering Excellence through Education</h2>
@@ -118,7 +118,7 @@ export default function About() {
 
       {/* Core Values */}
       <Reveal>
-        <section className="py-20 px-4">
+        <section className="py-14 sm:py-20 px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <p className="text-accent font-semibold uppercase tracking-wider text-sm mb-2">Core Values</p>
@@ -147,7 +147,7 @@ export default function About() {
             </div>
             
             <div className="text-center mt-12">
-              <Link href="/contact" className="inline-flex items-center gap-2 bg-accent text-white px-8 py-3.5 rounded-full font-semibold hover:bg-amber-600 transition-all">
+              <Link href="/contact" className="inline-flex items-center gap-2 bg-accent text-white px-8 py-3.5 rounded-full font-semibold hover:bg-amber-600 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300">
                 Contact Us <ChevronRight className="w-5 h-5" />
               </Link>
             </div>

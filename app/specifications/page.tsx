@@ -7,7 +7,7 @@ export default function Specifications() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative h-[400px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[320px] sm:h-[400px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&q=80&w=2000"
@@ -34,7 +34,7 @@ export default function Specifications() {
 
       {/* Main Facilities */}
       <Reveal>
-        <section className="py-20 px-4">
+        <section className="py-14 sm:py-20 px-4">
           <div className="max-w-6xl mx-auto space-y-16">
             {/* Class Room */}
             <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -137,7 +137,7 @@ export default function Specifications() {
 
       {/* More Facilities Grid */}
       <Reveal>
-        <section className="py-20 px-4 bg-white">
+        <section className="py-14 sm:py-20 px-4 bg-white">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <div className="flex items-center justify-center gap-4 mb-4">

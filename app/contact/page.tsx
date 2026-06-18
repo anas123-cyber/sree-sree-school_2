@@ -7,10 +7,10 @@ export default function Contact() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative h-[400px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[320px] sm:h-[400px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&q=80&w=2000"
+            src="/1000228463.jpg"
             alt="Contact"
             fill
             className="object-cover animate-ken-burns"
@@ -34,7 +34,7 @@ export default function Contact() {
 
       {/* Contact Info & Form */}
       <Reveal>
-        <section className="py-20 px-4">
+        <section className="py-14 sm:py-20 px-4">
           <div className="max-w-6xl mx-auto grid lg:grid-cols-3 gap-12">
           {/* Left Column - Info */}
           <div className="lg:col-span-1 space-y-6">
@@ -138,7 +138,7 @@ export default function Contact() {
                 
                 <button 
                   type="submit"
-                  className="w-full md:w-auto bg-accent text-white px-8 py-3.5 rounded-full font-semibold hover:bg-amber-600 transition-all flex items-center justify-center gap-2"
+                  className="w-full md:w-auto bg-accent text-white px-8 py-3.5 rounded-full font-semibold hover:bg-amber-600 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 flex items-center justify-center gap-2"
                 >
                   Send Message <Send className="w-4 h-4" />
                 </button>
@@ -151,7 +151,7 @@ export default function Contact() {
 
       {/* Map Section */}
       <Reveal>
-        <section className="py-20 px-4 bg-white">
+        <section className="py-14 sm:py-20 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <div className="flex items-center justify-center gap-4 mb-4">

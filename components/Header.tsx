@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
@@ -39,8 +40,14 @@ export default function Header() {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link href="/" className="group flex items-center gap-3">
-            <div className="w-12 h-12 rounded-full flex items-center justify-center font-pragati font-bold text-2xl bg-accent text-white shadow-md transition-all duration-300 group-hover:scale-105 group-hover:shadow-lg group-hover:shadow-accent/30">
-              SS
+            <div className="relative w-14 h-14 flex-shrink-0 transition-transform duration-300 group-hover:scale-105">
+              <Image
+                src="/logo.jpg"
+                alt="Sree Sree Educational Society logo"
+                fill
+                className="object-contain"
+                priority
+              />
             </div>
             <div className="hidden sm:block">
               <h1 className="font-bold text-xl leading-tight text-brand-red tracking-tight">

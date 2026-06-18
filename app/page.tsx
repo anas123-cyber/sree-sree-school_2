@@ -1,9 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Clock, Users, GraduationCap, Trophy, Target, Eye, ChevronRight, Star, BookOpen, Quote } from "lucide-react";
+import { Clock, Users, GraduationCap, Trophy, Target, Eye, ChevronRight, Star, BookOpen } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import CountUp from "@/components/CountUp";
 import HeroSlider from "@/components/HeroSlider";
+import Marquee from "@/components/Marquee";
+import Testimonials from "@/components/Testimonials";
+import ConnectionHub from "@/components/ConnectionHub";
 
 export default function Home() {
   return (
@@ -14,7 +17,7 @@ export default function Home() {
       {/* Stats Banner */}
       <Reveal>
         <section className="relative -mt-16 z-20 px-4">
-          <div className="max-w-5xl mx-auto bg-white rounded-2xl shadow-xl p-8 grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="max-w-5xl mx-auto bg-white rounded-2xl shadow-xl p-6 sm:p-8 grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
             <div className="text-center group">
               <Clock className="w-8 h-8 text-accent mx-auto mb-3 transition-transform group-hover:scale-110 duration-300" />
               <p className="text-4xl md:text-5xl font-serif font-bold text-primary mb-1 tracking-tight">
@@ -47,17 +50,37 @@ export default function Home() {
         </section>
       </Reveal>
 
+      {/* Values Marquee */}
+      <Reveal>
+        <section className="pt-16 pb-4 border-y border-gray-100 bg-white/60">
+          <Marquee
+            items={[
+              "Holistic Development",
+              "Primary School",
+              "Middle School",
+              "High School",
+              "Yoga & Pranayama",
+              "Since 1987",
+              "Building Character",
+              "Empowering Excellence",
+            ]}
+          />
+        </section>
+      </Reveal>
+
       {/* About Snippet */}
       <Reveal>
-        <section className="py-20 px-4">
-          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <section className="relative overflow-hidden py-14 sm:py-20 px-4">
+          <div className="glow-blob bg-accent/20 w-72 h-72 -top-10 -left-16" />
+          <div className="glow-blob bg-blue-400/15 w-80 h-80 bottom-0 -right-16" style={{ animationDelay: "4s" }} />
+          <div className="relative max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
             <div className="relative">
               <Image
                 src="/IMG-20260614-WA0032.jpg"
                 alt="Chairman"
                 width={500}
                 height={600}
-                className="rounded-2xl shadow-lg"
+                className="rounded-2xl shadow-lg w-full h-auto"
               />
               <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-lg max-w-xs hidden md:block">
                 <div className="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center mb-3">
@@ -84,7 +107,7 @@ export default function Home() {
 
       {/* Mission & Vision */}
       <Reveal>
-        <section className="py-20 px-4 bg-white">
+        <section className="py-14 sm:py-20 px-4 bg-white">
           <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
             <div className="bg-cream p-8 rounded-2xl border border-gray-100 card-lift">
               <div className="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6">
@@ -110,7 +133,7 @@ export default function Home() {
 
       {/* Specifications Section */}
       <Reveal>
-        <section className="py-20 px-4 bg-cream">
+        <section className="py-14 sm:py-20 px-4 bg-cream">
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
             <div className="relative rounded-2xl overflow-hidden shadow-xl h-[400px] md:h-[500px]">
               <Image
@@ -157,7 +180,7 @@ export default function Home() {
 
       {/* School Academics Section */}
       <Reveal>
-        <section className="py-20 px-4 bg-white">
+        <section className="py-14 sm:py-20 px-4 bg-white">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <div className="flex items-center justify-center gap-4 mb-2">
@@ -220,10 +243,30 @@ export default function Home() {
         </section>
       </Reveal>
 
+      {/* Why Choose Us — Connection Hub */}
+      <Reveal>
+        <section className="py-14 sm:py-20 px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <div className="flex items-center justify-center gap-4 mb-2">
+                <div className="h-px w-12 bg-accent" />
+                <span className="text-accent font-bold uppercase tracking-wider text-sm">Why Sree Sree</span>
+                <div className="h-px w-12 bg-accent" />
+              </div>
+              <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary">
+                One connected <span className="text-accent">learning ecosystem</span>
+              </h2>
+            </div>
+            <ConnectionHub />
+          </div>
+        </section>
+      </Reveal>
+
       {/* Testimonials Section */}
       <Reveal>
-        <section className="py-24 px-4 bg-gradient-to-r from-primary to-slate-800 text-white relative overflow-hidden">
+        <section className="py-16 sm:py-24 px-4 bg-gradient-to-r from-primary to-slate-800 text-white relative overflow-hidden">
           <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle, #ffffff 1px, transparent 1px)', backgroundSize: '30px 30px' }}></div>
+          <div className="glow-blob bg-accent/30 w-96 h-96 top-0 left-1/4" />
           <div className="max-w-4xl mx-auto text-center relative z-10">
             <div className="flex items-center justify-center gap-4 mb-4">
               <div className="h-px w-12 bg-accent" />
@@ -234,43 +277,18 @@ export default function Home() {
               What <span className="text-accent">parents</span> say
             </h2>
 
-            <div className="bg-primary/40 backdrop-blur-sm border border-white/10 rounded-3xl p-8 md:p-12 relative">
-              <Quote className="absolute top-6 left-6 w-16 h-16 text-accent/20" />
-              
-              <p className="text-xl md:text-2xl font-serif italic leading-relaxed mb-8 relative z-10">
-                "We've seen such a wonderful transformation in our child ever since she joined. She comes home every day excited to share what she's learned. The love, care, and dedication of the staff truly shine through. As parents, we feel confident and grateful knowing she's in such a nurturing environment."
-              </p>
-
-              <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6">
-                <div className="w-14 h-14 rounded-full bg-accent/20 border-2 border-accent flex items-center justify-center overflow-hidden">
-                  <div className="w-full h-full bg-gray-400" /> {/* Placeholder for avatar */}
-                </div>
-                <div className="text-left">
-                  <p className="font-bold text-lg">Priya M</p>
-                  <p className="text-gray-400 text-sm">Parent</p>
-                </div>
-                <div className="flex gap-1 md:ml-auto">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-accent fill-accent" />
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            <div className="flex justify-center gap-2 mt-8">
-              <div className="w-8 h-2 bg-accent rounded-full" />
-              <div className="w-2 h-2 bg-white/30 rounded-full" />
-              <div className="w-2 h-2 bg-white/30 rounded-full" />
-            </div>
+            <Testimonials />
           </div>
         </section>
       </Reveal>
 
       {/* CTA Section */}
       <Reveal>
-        <section className="py-20 px-4">
+        <section className="py-14 sm:py-20 px-4">
           <div className="max-w-4xl mx-auto bg-primary rounded-3xl p-10 md:p-16 text-center relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-transparent" />
+            <div className="glow-blob bg-accent/40 w-72 h-72 -top-16 -right-10" />
+            <div className="glow-blob bg-blue-500/25 w-72 h-72 -bottom-16 -left-10" style={{ animationDelay: "5s" }} />
             <div className="relative z-10">
               <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Star className="w-8 h-8 text-accent" />
@@ -280,7 +298,7 @@ export default function Home() {
                 Give your child the gift of holistic education in a nurturing environment that values tradition, innovation, and character.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" className="bg-accent text-white px-8 py-3.5 rounded-full font-semibold hover:bg-amber-600 transition-all flex items-center justify-center gap-2">
+                <Link href="/contact" className="bg-accent text-white px-8 py-3.5 rounded-full font-semibold hover:bg-amber-600 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 flex items-center justify-center gap-2">
                   Enroll Now <ChevronRight className="w-5 h-5" />
                 </Link>
                 <Link href="/academics" className="bg-white/10 backdrop-blur-sm text-white border border-white/30 px-8 py-3.5 rounded-full font-semibold hover:bg-white/20 transition-all">

@@ -50,7 +50,7 @@ export default function HeroSlider() {
   }, []);
 
   return (
-    <section className="relative min-h-[700px] flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[560px] md:min-h-[700px] flex items-center justify-center overflow-hidden">
       {/* Background Images with Fade Transition */}
       <div className="absolute inset-0">
         {slides.map((slide, index) => (
@@ -74,7 +74,7 @@ export default function HeroSlider() {
       </div>
 
       {/* Content with Fade & Slide Up Transition */}
-      <div className="relative z-20 w-full max-w-5xl mx-auto px-4 pt-24 flex items-center justify-center min-h-[700px]">
+      <div className="relative z-20 w-full max-w-5xl mx-auto px-4 pt-24 flex items-center justify-center min-h-[560px] md:min-h-[700px]">
         {slides.map((slide, index) => (
           <div
             key={index}
@@ -98,7 +98,7 @@ export default function HeroSlider() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center w-full sm:w-auto">
               <Link
                 href="/about"
-                className="bg-accent text-white px-8 py-3.5 rounded-full font-semibold hover:bg-amber-600 transition-all flex items-center justify-center gap-2"
+                className="bg-accent text-white px-8 py-3.5 rounded-full font-semibold hover:bg-amber-600 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 flex items-center justify-center gap-2"
               >
                 Discover Our Story <ChevronRight className="w-5 h-5" />
               </Link>
