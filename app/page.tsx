@@ -20,28 +20,28 @@ export default function Home() {
           <div className="max-w-5xl mx-auto bg-white rounded-2xl shadow-xl p-6 sm:p-8 grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
             <div className="text-center group">
               <Clock className="w-8 h-8 text-accent mx-auto mb-3 transition-transform group-hover:scale-110 duration-300" />
-              <p className="text-4xl md:text-5xl font-serif font-bold text-primary mb-1 tracking-tight">
+              <p className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-primary mb-1 tracking-tight">
                 <CountUp target={38} />+
               </p>
               <p className="text-sm text-gray-600 font-medium uppercase tracking-wide">Years of Excellence</p>
             </div>
             <div className="text-center group">
               <Users className="w-8 h-8 text-accent mx-auto mb-3 transition-transform group-hover:scale-110 duration-300" />
-              <p className="text-4xl md:text-5xl font-serif font-bold text-primary mb-1 tracking-tight">
+              <p className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-primary mb-1 tracking-tight">
                 <CountUp target={5000} />+
               </p>
               <p className="text-sm text-gray-600 font-medium uppercase tracking-wide">Students Empowered</p>
             </div>
             <div className="text-center group">
               <GraduationCap className="w-8 h-8 text-accent mx-auto mb-3 transition-transform group-hover:scale-110 duration-300" />
-              <p className="text-4xl md:text-5xl font-serif font-bold text-primary mb-1 tracking-tight">
+              <p className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-primary mb-1 tracking-tight">
                 <CountUp target={100} />+
               </p>
               <p className="text-sm text-gray-600 font-medium uppercase tracking-wide">Dedicated Educators</p>
             </div>
             <div className="text-center group">
               <Trophy className="w-8 h-8 text-accent mx-auto mb-3 transition-transform group-hover:scale-110 duration-300" />
-              <p className="text-4xl md:text-5xl font-serif font-bold text-primary mb-1 tracking-tight">
+              <p className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-primary mb-1 tracking-tight">
                 <CountUp target={50} />+
               </p>
               <p className="text-sm text-gray-600 font-medium uppercase tracking-wide">Awards & Honors</p>

@@ -22,8 +22,14 @@ export default function AdmissionModal() {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fade-in">
-      <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full relative overflow-hidden animate-modal-drop">
+    <div
+      onClick={() => setIsOpen(false)}
+      className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fade-in"
+    >
+      <div
+        onClick={(e) => e.stopPropagation()}
+        className="bg-white rounded-2xl shadow-2xl max-w-md w-full relative max-h-[90vh] overflow-y-auto overflow-x-hidden animate-modal-drop"
+      >
         
         {/* Close Button (Top Left as per reference) */}
         <button
