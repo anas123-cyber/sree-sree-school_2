@@ -2,11 +2,13 @@ import Link from "next/link";
 import Image from "next/image";
 import { Clock, Users, GraduationCap, Trophy, Target, Eye, ChevronRight, Star, BookOpen } from "lucide-react";
 import Reveal from "@/components/Reveal";
+import TextReveal from "@/components/TextReveal";
 import CountUp from "@/components/CountUp";
 import HeroSlider from "@/components/HeroSlider";
 import Marquee from "@/components/Marquee";
 import Testimonials from "@/components/Testimonials";
 import ConnectionHub from "@/components/ConnectionHub";
+import DeviceShowcase from "@/components/DeviceShowcase";
 
 export default function Home() {
   return (
@@ -92,7 +94,12 @@ export default function Home() {
             </div>
             <div>
               <p className="text-accent font-semibold uppercase tracking-wider text-sm mb-2">About Us</p>
-              <h2 className="text-4xl font-serif font-bold text-primary mb-6">Empowering Excellence through Education</h2>
+              <TextReveal
+                as="h2"
+                text="Empowering Excellence through Education"
+                highlight={["Excellence"]}
+                className="text-4xl font-serif font-bold text-primary mb-6"
+              />
               <p className="text-gray-600 leading-relaxed mb-6">
                 Founded in 1987, Sree Sree Educational Society has been at the forefront of providing holistic, values-based education. 
                 Our institution blends traditional wisdom with modern pedagogical methods to nurture well-rounded individuals.
@@ -104,6 +111,9 @@ export default function Home() {
           </div>
         </section>
       </Reveal>
+
+      {/* Campus Tour — laptop on desktop, phone on mobile */}
+      <DeviceShowcase />
 
       {/* Mission & Vision */}
       <Reveal>

@@ -2,6 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight, Heart, Trophy, BookOpen, Users, Sparkles, Medal, Clock } from "lucide-react";
 import Reveal from "@/components/Reveal";
+import TextReveal from "@/components/TextReveal";
+import DeviceShowcase from "@/components/DeviceShowcase";
 
 export default function About() {
   return (
@@ -13,7 +15,7 @@ export default function About() {
             src="/1000228463.jpg"
             alt="About Us"
             fill
-            className="object-cover animate-ken-burns"
+            className="object-cover object-top animate-ken-burns"
             priority
           />
           <div className="absolute inset-0 bg-primary/50" />
@@ -25,7 +27,12 @@ export default function About() {
             <ChevronRight className="w-4 h-4" />
             <span>About Us</span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-serif font-bold text-white mb-4 text-shadow-hero">About Us</h1>
+          <TextReveal
+            as="h1"
+            text="About Us"
+            highlight={["Us"]}
+            className="text-4xl md:text-5xl font-serif font-bold text-white mb-4 text-shadow-hero"
+          />
           <p className="text-gray-300 max-w-2xl mx-auto">
             Empowering Excellence through Education — a legacy spanning over three decades in Eluru, Andhra Pradesh.
           </p>
@@ -53,7 +60,12 @@ export default function About() {
                 <Clock className="w-4 h-4" />
                 <span className="text-sm font-semibold">SINCE 1987</span>
               </div>
-              <h2 className="text-3xl font-serif font-bold text-primary mb-6">Dr. M.B.S. Sarma (Chairman)</h2>
+              <TextReveal
+                as="h2"
+                text="Dr. M.B.S. Sarma (Chairman)"
+                highlight={["(Chairman)"]}
+                className="text-3xl font-serif font-bold text-primary mb-6"
+              />
               <ul className="space-y-2 mb-6 text-gray-600">
                 <li className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 bg-accent rounded-full" />
@@ -81,6 +93,9 @@ export default function About() {
           </div>
         </section>
       </Reveal>
+
+      {/* Campus Tour — laptop on desktop, phone on mobile */}
+      <DeviceShowcase />
 
       {/* Timeline */}
       <Reveal>

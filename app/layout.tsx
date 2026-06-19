@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import TopBanner from "@/components/TopBanner";
 import Header from "@/components/Header";
@@ -11,6 +11,12 @@ import CallButton from "@/components/CallButton";
 export const metadata: Metadata = {
   title: "Sree Sree Educational Society",
   description: "Empowering excellence through education since 1987",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  // No maximumScale — pinch-to-zoom stays available for accessibility
 };
 
 export default function RootLayout({

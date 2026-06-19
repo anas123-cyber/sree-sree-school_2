@@ -15,12 +15,30 @@ html {
   scroll-padding-top: 6rem;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  /* Stop iOS/Android from auto-inflating text in landscape */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: 'Inter', sans-serif;
+  /* Prevent scroll anchoring from fighting the collapsing top banner (no jump/bounce) */
+  overflow-anchor: none;
+  /* Guarantee no horizontal scroll on any device. `clip` (not `hidden`) keeps
+     the sticky header working since it doesn't create a scroll container. */
+  overflow-x: clip;
+  /* Remove the grey tap-flash on mobile for a more app-like feel */
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Media can never overflow its container and cause a horizontal scrollbar */
+img,
+video,
+iframe,
+canvas {
+  max-width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {

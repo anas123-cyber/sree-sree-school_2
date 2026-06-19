@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight, MapPin, Mail, Phone, Clock, Facebook, Instagram, Youtube, Twitter, Send } from "lucide-react";
 import Reveal from "@/components/Reveal";
+import TextReveal from "@/components/TextReveal";
 
 export default function Contact() {
   return (
@@ -13,7 +14,7 @@ export default function Contact() {
             src="/1000228463.jpg"
             alt="Contact"
             fill
-            className="object-cover animate-ken-burns"
+            className="object-cover object-top animate-ken-burns"
             priority
           />
           <div className="absolute inset-0 bg-primary/50" />
@@ -25,7 +26,12 @@ export default function Contact() {
             <ChevronRight className="w-4 h-4" />
             <span>Contact</span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-serif font-bold text-white mb-4 text-shadow-hero">Get in Touch</h1>
+          <TextReveal
+            as="h1"
+            text="Get in Touch"
+            highlight={["Touch"]}
+            className="text-4xl md:text-5xl font-serif font-bold text-white mb-4 text-shadow-hero"
+          />
           <p className="text-gray-200 max-w-2xl mx-auto">
             Building a strong foundation for lifelong success through education and innovation. We'd love to hear from you.
           </p>
@@ -159,13 +165,18 @@ export default function Contact() {
               <p className="text-accent font-semibold uppercase tracking-wider text-sm">Find Us</p>
               <div className="h-px w-12 bg-accent" />
             </div>
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary">Visit our campus</h2>
+            <TextReveal
+              as="h2"
+              text="Visit our campus"
+              highlight={["campus"]}
+              className="text-3xl md:text-4xl font-serif font-bold text-primary"
+            />
           </div>
           
           <div className="rounded-2xl overflow-hidden shadow-lg border border-gray-200 h-96 relative">
             <iframe
               title="Sree Sree Educational Society Location"
-              src="https://maps.google.com/maps?q=Sriram+Nagar,+Sanivarapupeta,+Eluru,+Andhra+Pradesh+534003&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              src="https://maps.google.com/maps?q=Sree+Sree+Educational+Society,+Sriram+Nagar,+Sanivarapupeta,+Eluru,+Andhra+Pradesh+534003&t=&z=18&ie=UTF8&iwloc=B&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}

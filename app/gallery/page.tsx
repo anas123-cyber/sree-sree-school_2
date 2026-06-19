@@ -71,7 +71,7 @@ export default function Gallery() {
             src="/1000228463.jpg"
             alt="Gallery"
             fill
-            className="object-cover animate-ken-burns"
+            className="object-cover object-top animate-ken-burns"
             priority
           />
           <div className="absolute inset-0 bg-primary/50" />

@@ -64,7 +64,7 @@ export default function HeroSlider() {
               src={slide.image}
               alt="Hero Background"
               fill
-              className="object-cover"
+              className="object-cover object-top"
               priority={index === 0}
             />
             {/* Gradient Overlay for text readability (lightened so the photo shows through) */}

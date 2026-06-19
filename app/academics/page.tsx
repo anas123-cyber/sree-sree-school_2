@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight, BookOpen, Sparkles, GraduationCap, Phone, Dumbbell, Palette, FlaskConical, HeartHandshake } from "lucide-react";
 import Reveal from "@/components/Reveal";
+import TextReveal from "@/components/TextReveal";
 import FeatureGrid from "@/components/FeatureGrid";
 
 const offerings = [
@@ -23,7 +24,7 @@ export default function Academics() {
             src="/1000228463.jpg"
             alt="Academics"
             fill
-            className="object-cover animate-ken-burns"
+            className="object-cover object-top animate-ken-burns"
             priority
           />
           <div className="absolute inset-0 bg-primary/50" />
@@ -35,7 +36,12 @@ export default function Academics() {
             <ChevronRight className="w-4 h-4" />
             <span>Academics</span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-serif font-bold text-white mb-4 text-shadow-hero">Academics</h1>
+          <TextReveal
+            as="h1"
+            text="Academics"
+            highlight={["Academics"]}
+            className="text-4xl md:text-5xl font-serif font-bold text-white mb-4 text-shadow-hero"
+          />
           <p className="text-gray-200 max-w-2xl mx-auto">
             A structured journey of learning that grows with every student — from curious beginners to confident graduates.
           </p>
@@ -57,7 +63,12 @@ export default function Academics() {
                 <span className="text-accent font-bold uppercase tracking-wider text-sm">What We Offer</span>
                 <div className="h-px w-12 bg-accent" />
               </div>
-              <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary">A well-rounded education</h2>
+              <TextReveal
+                as="h2"
+                text="A well-rounded education"
+                highlight={["well-rounded"]}
+                className="text-3xl md:text-4xl font-serif font-bold text-primary"
+              />
             </div>
             <FeatureGrid items={offerings} />
           </div>

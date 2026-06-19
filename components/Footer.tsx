@@ -74,7 +74,7 @@ export default function Footer() {
           <div className="relative w-full h-48 md:h-56 rounded-2xl overflow-hidden border border-white/10 shadow-lg bg-gray-800">
             <iframe
               title="School Location Map"
-              src="https://maps.google.com/maps?q=Sriram+Nagar,+Sanivarapupeta,+Eluru,+Andhra+Pradesh+534003&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              src="https://maps.google.com/maps?q=Sree+Sree+Educational+Society,+Sriram+Nagar,+Sanivarapupeta,+Eluru,+Andhra+Pradesh+534003&t=&z=18&ie=UTF8&iwloc=B&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0, filter: "grayscale(20%) contrast(1.1)" }}
