@@ -27,13 +27,24 @@ export default function Header() {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isHidden, setIsHidden] = useState(false);
   const [isProgramsOpen, setIsProgramsOpen] = useState(false);
   const [mobileProgramsOpen, setMobileProgramsOpen] = useState(false);
   const programsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 40);
+      const y = window.scrollY;
+      setIsScrolled(y > 40);
+
+      // Same behaviour as the top banner: vanish once scrolled down, and only
+      // reappear when scrolled back up near the top. The 8–40px dead-zone keeps
+      // it from flickering around the edge.
+      if (y > 40) {
+        setIsHidden(true);
+      } else if (y < 8) {
+        setIsHidden(false);
+      }
     };
 
     // Initial check in case page loads scrolled down
@@ -57,9 +68,9 @@ export default function Header() {
   const programsActive = pathname === "/programs";
 
   return (
-    <header className={`sticky top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <header className={`sticky top-0 left-0 right-0 z-50 transition-all duration-700 ease-in-out ${
       isScrolled ? "bg-white/95 backdrop-blur-md shadow-md" : "bg-transparent"
-    }`}>
+    } ${isHidden && !isMenuOpen ? "-translate-y-full opacity-0" : "translate-y-0 opacity-100"}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
@@ -73,12 +84,12 @@ export default function Header() {
                 priority
               />
             </div>
-            <div className="hidden sm:block">
-              <h1 className="font-bold text-xl leading-tight text-brand-red tracking-tight">
+            <div className="block">
+              <h1 className="font-bold text-lg sm:text-xl leading-tight text-brand-red tracking-tight">
                 <span className="font-pragati">Sr</span>
                 <span className="font-serif">ee Sree</span>
               </h1>
-              <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-blue">Educational Society</p>
+              <p className="text-[9px] sm:text-[11px] font-semibold uppercase tracking-[0.12em] sm:tracking-[0.2em] text-brand-blue">Educational Society</p>
             </div>
           </Link>
 
