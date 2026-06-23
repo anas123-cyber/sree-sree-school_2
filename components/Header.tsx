@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu, X, ChevronDown, Cpu, Hand, HeartHandshake, Crown, Dumbbell } from "lucide-react";
+import { Menu, X, ChevronDown, Cpu, Hand, HeartHandshake, Crown, Dumbbell, Images, Video } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 
 const navLinks = [
@@ -11,8 +11,12 @@ const navLinks = [
   { name: "About", href: "/about" },
   { name: "Achievements", href: "/achievements" },
   { name: "Academics", href: "/academics" },
-  { name: "Gallery", href: "/gallery" },
-  { name: "Contact", href: "/contact" },
+];
+
+// Gallery splits into Images and Videos (same look & layout for both pages)
+const galleryLinks = [
+  { name: "Images", href: "/gallery", icon: Images, desc: "Photo gallery" },
+  { name: "Videos", href: "/videos", icon: Video, desc: "Video gallery" },
 ];
 
 const programs = [
@@ -30,7 +34,10 @@ export default function Header() {
   const [isHidden, setIsHidden] = useState(false);
   const [isProgramsOpen, setIsProgramsOpen] = useState(false);
   const [mobileProgramsOpen, setMobileProgramsOpen] = useState(false);
+  const [isGalleryOpen, setIsGalleryOpen] = useState(false);
+  const [mobileGalleryOpen, setMobileGalleryOpen] = useState(false);
   const programsRef = useRef<HTMLDivElement>(null);
+  const galleryRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -54,11 +61,14 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close the desktop Programs dropdown when clicking outside of it
+  // Close the desktop dropdowns when clicking outside of them
   useEffect(() => {
     const handleClick = (e: MouseEvent) => {
       if (programsRef.current && !programsRef.current.contains(e.target as Node)) {
         setIsProgramsOpen(false);
+      }
+      if (galleryRef.current && !galleryRef.current.contains(e.target as Node)) {
+        setIsGalleryOpen(false);
       }
     };
     document.addEventListener("mousedown", handleClick);
@@ -66,6 +76,14 @@ export default function Header() {
   }, []);
 
   const programsActive = pathname === "/programs";
+  const galleryActive = pathname === "/gallery" || pathname === "/videos";
+
+  const navLinkClass = (active: boolean) =>
+    `nav-underline text-sm font-medium transition-colors hover:text-accent ${
+      active
+        ? "text-accent nav-underline-active"
+        : isScrolled ? "text-gray-700" : "text-primary"
+    }`;
 
   return (
     <header className={`sticky top-0 left-0 right-0 z-50 transition-all duration-700 ease-in-out ${
@@ -85,9 +103,8 @@ export default function Header() {
               />
             </div>
             <div className="block">
-              <h1 className="font-bold text-lg sm:text-xl leading-tight text-brand-red tracking-tight">
-                <span className="font-pragati">Sr</span>
-                <span className="font-serif">ee Sree</span>
+              <h1 className="font-serif font-bold text-lg sm:text-xl leading-tight text-brand-red tracking-tight">
+                Sree Sree
               </h1>
               <p className="text-[9px] sm:text-[11px] font-semibold uppercase tracking-[0.12em] sm:tracking-[0.2em] text-brand-blue">Educational Society</p>
             </div>
@@ -99,15 +116,60 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`nav-underline text-sm font-medium transition-colors hover:text-accent ${
-                  pathname === link.href
-                    ? "text-accent nav-underline-active"
-                    : isScrolled ? "text-gray-700" : "text-primary"
-                }`}
+                className={navLinkClass(pathname === link.href)}
               >
                 {link.name}
               </Link>
             ))}
+
+            {/* Gallery Dropdown (Images / Videos) */}
+            <div
+              ref={galleryRef}
+              className="relative"
+              onMouseEnter={() => setIsGalleryOpen(true)}
+              onMouseLeave={() => setIsGalleryOpen(false)}
+            >
+              <button
+                onClick={() => setIsGalleryOpen((v) => !v)}
+                className={`flex items-center gap-1 ${navLinkClass(galleryActive)}`}
+                aria-expanded={isGalleryOpen}
+              >
+                Gallery
+                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isGalleryOpen ? "rotate-180" : ""}`} />
+              </button>
+
+              <div
+                className={`absolute left-0 top-full pt-3 w-56 transition-all duration-200 origin-top ${
+                  isGalleryOpen
+                    ? "opacity-100 translate-y-0 pointer-events-auto"
+                    : "opacity-0 -translate-y-2 pointer-events-none"
+                }`}
+              >
+                <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-2 overflow-hidden">
+                  {galleryLinks.map((g) => (
+                    <Link
+                      key={g.href}
+                      href={g.href}
+                      onClick={() => setIsGalleryOpen(false)}
+                      className="group/item flex items-center gap-3 rounded-xl px-3 py-2.5 hover:bg-accent/10 transition-colors"
+                    >
+                      <span className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-lg bg-accent/10 text-accent group-hover/item:bg-accent group-hover/item:text-white transition-colors">
+                        <g.icon className="w-5 h-5" />
+                      </span>
+                      <span>
+                        <span className="block text-sm font-semibold text-primary">{g.name}</span>
+                        <span className="block text-xs text-gray-500">{g.desc}</span>
+                      </span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Contact */}
+            <Link href="/contact" className={navLinkClass(pathname === "/contact")}>
+              Contact
+            </Link>
 
             {/* Programs Dropdown */}
             <div
@@ -118,14 +180,10 @@ export default function Header() {
             >
               <button
                 onClick={() => setIsProgramsOpen((v) => !v)}
-                className={`nav-underline flex items-center gap-1 text-sm font-medium transition-colors hover:text-accent ${
-                  programsActive
-                    ? "text-accent nav-underline-active"
-                    : isScrolled ? "text-gray-700" : "text-primary"
-                }`}
+                className={`flex items-center gap-1 ${navLinkClass(programsActive)}`}
                 aria-expanded={isProgramsOpen}
               >
-                Programs
+                Co-curricular Activities
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isProgramsOpen ? "rotate-180" : ""}`} />
               </button>
 
@@ -195,6 +253,49 @@ export default function Header() {
               </Link>
             ))}
 
+            {/* Mobile Gallery accordion */}
+            <div>
+              <button
+                onClick={() => setMobileGalleryOpen((v) => !v)}
+                className={`flex w-full items-center justify-between py-2 text-sm font-medium ${
+                  galleryActive ? "text-accent" : "text-gray-700"
+                }`}
+                aria-expanded={mobileGalleryOpen}
+              >
+                Gallery
+                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${mobileGalleryOpen ? "rotate-180" : ""}`} />
+              </button>
+              {mobileGalleryOpen && (
+                <div className="mt-1 mb-1 space-y-1 border-l-2 border-accent/30 pl-3">
+                  {galleryLinks.map((g) => (
+                    <Link
+                      key={g.href}
+                      href={g.href}
+                      onClick={() => {
+                        setIsMenuOpen(false);
+                        setMobileGalleryOpen(false);
+                      }}
+                      className="flex items-center gap-2 py-1.5 text-sm text-gray-600 hover:text-accent"
+                    >
+                      <g.icon className="w-4 h-4 text-accent" />
+                      {g.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Contact */}
+            <Link
+              href="/contact"
+              className={`block py-2 text-sm font-medium ${
+                pathname === "/contact" ? "text-accent" : "text-gray-700"
+              }`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Contact
+            </Link>
+
             {/* Mobile Programs accordion */}
             <div>
               <button
@@ -204,7 +305,7 @@ export default function Header() {
                 }`}
                 aria-expanded={mobileProgramsOpen}
               >
-                Programs
+                Co-curricular Activities
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${mobileProgramsOpen ? "rotate-180" : ""}`} />
               </button>
               {mobileProgramsOpen && (

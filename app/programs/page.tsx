@@ -76,7 +76,7 @@ export default function Programs() {
         <div className="absolute inset-0">
           <Image
             src="/1000228485.jpg"
-            alt="Our Programs"
+            alt="Our Co-curricular Activities"
             fill
             className="object-cover object-top animate-ken-burns"
             priority
@@ -88,7 +88,7 @@ export default function Programs() {
           <div className="flex items-center justify-center gap-2 text-accent text-sm mb-4">
             <Link href="/" className="hover:underline">Home</Link>
             <ChevronRight className="w-4 h-4" />
-            <span>Programs</span>
+            <span>Co-curricular Activities</span>
           </div>
           <TextReveal
             as="h1"
@@ -131,7 +131,9 @@ export default function Programs() {
                     fits perfectly with no cropping or distortion */}
                 <Reveal className={index % 2 === 1 ? "md:order-2" : ""}>
                   <div
-                    className="group relative mx-auto w-full max-w-md overflow-hidden rounded-3xl bg-white shadow-xl ring-1 ring-black/5"
+                    className={`group relative mx-auto w-full overflow-hidden rounded-3xl bg-white shadow-xl ring-1 ring-black/5 ${
+                      p.id === "chess" ? "max-w-[210px]" : "max-w-md"
+                    }`}
                     style={{ aspectRatio: String(p.aspect) }}
                   >
                     <Image
@@ -180,6 +182,32 @@ export default function Programs() {
           ))}
         </div>
       </section>
+
+      {/* Co-curricular activities overview poster */}
+      <Reveal>
+        <section className="py-14 sm:py-20 px-4 bg-cream">
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-10">
+              <p className="text-accent font-semibold uppercase tracking-wider text-sm mb-2">At a Glance</p>
+              <TextReveal
+                as="h2"
+                text="Technology + Tradition + Strength"
+                highlight={["Strength"]}
+                className="text-3xl md:text-4xl font-serif font-bold text-primary"
+              />
+            </div>
+            <div className="max-w-md mx-auto rounded-2xl overflow-hidden shadow-xl ring-1 ring-black/5">
+              <Image
+                src="/IMG-20260614-WA0033.jpg"
+                alt="Sree Sree Educational Society — co-curricular activities overview"
+                width={1262}
+                height={1600}
+                className="w-full h-auto"
+              />
+            </div>
+          </div>
+        </section>
+      </Reveal>
 
       {/* CTA */}
       <Reveal>

@@ -217,3 +217,47 @@ textarea:focus-visible {
     animation: none;
   }
 }
+
+/* ---------- Gallery responsive grid ----------
+   >=1030px : original fluid 4 columns.
+   768-1030 : 4 columns, box size shrinks smoothly from 200px down to 140px.
+   <768px   : boxes stack one per row at 515px, shrinking with the screen width. */
+.gallery-grid {
+  display: grid;
+  justify-content: center;
+  gap: 1.5rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+@media (max-width: 1029.98px) {
+  .gallery-grid {
+    gap: 1.25rem;
+    grid-template-columns: repeat(4, clamp(140px, calc(140px + (100vw - 768px) * 0.229), 200px));
+  }
+}
+
+@media (max-width: 767.98px) {
+  .gallery-grid {
+    gap: 1.5rem;
+    grid-template-columns: min(515px, calc(100vw - 2rem));
+  }
+}
+
+/* ---------- Video grid (rectangular frames) ----------
+   Frames are rectangles up to 516×281 (the box keeps a 516:281 ratio). Two per
+   row on wide screens, each shrinking fluidly as the width drops, then one per
+   row on small screens. */
+.video-grid {
+  display: grid;
+  justify-content: center;
+  gap: 1.5rem;
+  grid-template-columns: repeat(3, minmax(0, 360px));
+}
+
+/* Below 1200px: never two per row — drop straight to a single, larger video
+   per row that shrinks with the screen width. */
+@media (max-width: 1200px) {
+  .video-grid {
+    grid-template-columns: min(516px, calc(100vw - 4rem));
+  }
+}

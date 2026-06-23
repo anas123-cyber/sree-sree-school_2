@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import Script from "next/script";
 import { ChevronRight, MapPin, Mail, Phone, Clock, Facebook, Instagram, Youtube, Twitter, Send } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import TextReveal from "@/components/TextReveal";
@@ -58,9 +59,9 @@ export default function Contact() {
               <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center flex-shrink-0">
                 <Mail className="w-6 h-6 text-accent" />
               </div>
-              <div>
+              <div className="min-w-0">
                 <h3 className="font-bold text-primary mb-1">Email</h3>
-                <p className="text-gray-600 text-sm">sreesreeeducationsociety1987@gmail.com</p>
+                <p className="text-gray-600 text-sm break-words">sreesreeeducationsociety1987@gmail.com</p>
               </div>
             </div>
             
@@ -142,13 +143,22 @@ export default function Contact() {
                   />
                 </div>
                 
-                <button 
+                {/* Google reCAPTCHA — replace the test data-sitekey below with your own site key */}
+                <div
+                  className="g-recaptcha"
+                  data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+                ></div>
+
+                <button
                   type="submit"
                   className="w-full md:w-auto bg-accent text-white px-8 py-3.5 rounded-full font-semibold hover:bg-amber-600 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 flex items-center justify-center gap-2"
                 >
                   Send Message <Send className="w-4 h-4" />
                 </button>
               </form>
+
+              {/* Loads the reCAPTCHA widget */}
+              <Script src="https://www.google.com/recaptcha/api.js" strategy="afterInteractive" />
             </div>
           </div>
         </div>

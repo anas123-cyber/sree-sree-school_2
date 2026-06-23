@@ -15,25 +15,47 @@ export default function Reveal({
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    let done = false;
+    const show = () => {
+      if (done) return;
+      done = true;
+      setTimeout(() => setIsVisible(true), delay);
+    };
+
+    // True when the element overlaps (or has been scrolled past) the viewport.
+    const inView = () => {
+      const vh = window.innerHeight || document.documentElement.clientHeight;
+      const r = el.getBoundingClientRect();
+      return r.top < vh && r.bottom > 0;
+    };
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          // Add a slight delay if specified, for staggered effects
-          setTimeout(() => {
-            setIsVisible(true);
-          }, delay);
-          observer.unobserve(entry.target);
+          show();
+          observer.disconnect();
         }
       },
       { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
     );
+    observer.observe(el);
 
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
+    // Reveal immediately if it's already on screen at mount. The
+    // IntersectionObserver can miss this initial state when the page is opened
+    // while already in view (e.g. with devtools open), which previously left
+    // content stuck invisible until the next scroll/resize. Re-checked across a
+    // couple of frames + a short timeout so it works even before layout settles.
+    if (inView()) show();
+    const raf = requestAnimationFrame(() => { if (inView()) show(); });
+    const timer = setTimeout(() => { if (inView()) show(); }, 250);
 
     return () => {
-      if (ref.current) observer.unobserve(ref.current);
+      observer.disconnect();
+      cancelAnimationFrame(raf);
+      clearTimeout(timer);
     };
   }, [delay]);
 

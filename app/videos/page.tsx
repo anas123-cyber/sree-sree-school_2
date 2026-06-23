@@ -2,47 +2,38 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { ChevronRight, Camera, X, ChevronLeft } from "lucide-react";
+import { ChevronRight, Play, X, ChevronLeft } from "lucide-react";
 import { useState, useEffect, useCallback } from "react";
+import Reveal from "@/components/Reveal";
 
-const galleryItems: {
-  id: number;
-  category: string;
-  title: string;
-  image: string;
-  color: string;
-  fit?: "cover" | "zoom"; // "cover" fills the box; "zoom" shows a wide photo
-                          // zoomed out a little so its edges (e.g. trees) stay visible
-}[] = [
-  { id: 1, category: "Events", title: "School Event", image: "/Screenshot 2026-06-23 121107.png", color: "bg-red-500", fit: "cover" },
-  { id: 2, category: "Cultural", title: "Cultural Day", image: "/1000228461.jpg", color: "bg-yellow-500" },
-  { id: 3, category: "Events", title: "Annual Celebration", image: "/IMG-20260615-WA0051.jpg", color: "bg-pink-500" },
-  { id: 4, category: "Academics", title: "Academic Honors", image: "/1000228468.jpg", color: "bg-green-500" },
-  { id: 5, category: "Cultural", title: "Independence Day", image: "/IMG-20260615-WA0049.jpg", color: "bg-blue-500" },
-  { id: 6, category: "Academics", title: "Primary School Activities", image: "/IMG-20260615-WA0057.jpg", color: "bg-purple-500" },
-  { id: 7, category: "Academics", title: "Middle School Awards", image: "/1000228455.jpg", color: "bg-indigo-500" },
-  { id: 8, category: "Meetings", title: "Meeting", image: "/IMG-20260615-WA0064.jpg", color: "bg-orange-500" },
-  { id: 9, category: "Academics", title: "Academic Excellence", image: "/IMG-20260614-WA0029.jpg", color: "bg-teal-500" },
-  { id: 10, category: "Leadership", title: "Dr. M.B.S. Sarma", image: "/1000228469.jpg", color: "bg-gray-600" },
-  { id: 11, category: "Leadership", title: "Honour", image: "/Screenshot 2026-06-23 122429.png", color: "bg-gray-600" },
-  { id: 12, category: "Leadership", title: "Guest", image: "/1000228470.jpg", color: "bg-gray-600" },
-  { id: 13, category: "Leadership", title: "Guest", image: "/y.jpg", color: "bg-gray-600" },
-  { id: 14, category: "Leadership", title: "Guest", image: "/Screenshot 2026-06-23 122123.png", color: "bg-gray-600" },
-  { id: 15, category: "Leadership", title: "Special Guest", image: "/1000228467.jpg", color: "bg-gray-600" },
-  { id: 16, category: "Leadership", title: "Special Guest", image: "/x.jpg", color: "bg-gray-600" },
-  { id: 17, category: "Leadership", title: "Special Guest", image: "/IMG-20260615-WA0048.jpg", color: "bg-gray-600" },
+// NOTE: these are placeholder sample videos — replace the `video` URLs with your own.
+const videoItems = [
+  { id: 1, category: "Events", title: "Annual Day", video: "https://youtu.be/dH7ULHO7O2g?si=tBYtJvUrCbG_C549", color: "bg-red-500" },
+  { id: 2, category: "Cultural", title: "Cultural Fest", video: "https://youtu.be/x0VPRgV65qg?si=2yY3WJqXRu5GqtS4", color: "bg-yellow-500" },
+  { id: 3, category: "Sports", title: "Sports Meet", video: "https://youtu.be/gbfZPcTt4fo?si=jJOyqzciZna_eqtg", color: "bg-pink-500" },
+  { id: 4, category: "Academics", title: "Science Exhibition", video: "https://youtu.be/IOm9prbr_JE?si=AwbxNukC6KJRk5DH", color: "bg-green-500" },
+  { id: 5, category: "Events", title: "Independence Day", video: "https://youtu.be/HFxya8esboc?si=tAZYzPHlnQxRzVFV", color: "bg-blue-500" },
+  { id: 6, category: "Cultural", title: "Dance Programme", video: "https://youtu.be/BfzHwTGBJG4?si=Ow4hM7Q7fgPeu6MV", color: "bg-purple-500" },
+  { id: 7, category: "Academics", title: "Classroom Activities", video: "https://youtu.be/Dsnh2-aJNKw?si=M2f2wrEAMm4WVYt0", color: "bg-indigo-500" },
+  { id: 8, category: "Leadership", title: "Felicitation", video: "https://youtu.be/Wt20WmT2Nas?si=EPjjslas4GlLrxRz", color: "bg-gray-600" },
 ];
 
-// Built from the actual items so every tab always has images (no empty tabs)
-const categories = ["All", ...Array.from(new Set(galleryItems.map((i) => i.category)))];
+const categories = ["All", "Events", "Cultural", "Academics", "Sports", "Leadership"];
 
-export default function Gallery() {
+// Returns the YouTube video id for any youtube.com / youtu.be / shorts / embed
+// link, or null if the url is a normal video file (e.g. an .mp4).
+function youTubeId(url: string): string | null {
+  const m = url.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|v\/|shorts\/))([\w-]{11})/);
+  return m ? m[1] : null;
+}
+
+export default function Videos() {
   const [activeCategory, setActiveCategory] = useState("All");
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
   const filteredItems = activeCategory === "All"
-    ? galleryItems
-    : galleryItems.filter(item => item.category === activeCategory);
+    ? videoItems
+    : videoItems.filter(item => item.category === activeCategory);
 
   const closeLightbox = useCallback(() => setLightboxIndex(null), []);
   const showPrev = useCallback(
@@ -79,7 +70,7 @@ export default function Gallery() {
         <div className="absolute inset-0">
           <Image
             src="/1000228463.jpg"
-            alt="Gallery"
+            alt="Videos"
             fill
             className="object-cover object-top animate-ken-burns"
             priority
@@ -91,9 +82,9 @@ export default function Gallery() {
           <div className="flex items-center justify-center gap-2 text-accent text-sm mb-4">
             <Link href="/" className="hover:underline">Home</Link>
             <ChevronRight className="w-4 h-4" />
-            <span>Images</span>
+            <span>Videos</span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-serif font-bold text-white mb-4 text-shadow-hero">Images</h1>
+          <h1 className="text-4xl md:text-5xl font-serif font-bold text-white mb-4 text-shadow-hero">Videos</h1>
           <p className="text-gray-300 max-w-2xl mx-auto">
             A glimpse into life at Sree Sree — events, celebrations, achievements, and everyday moments.
           </p>
@@ -119,52 +110,58 @@ export default function Gallery() {
         </div>
       </section>
 
-      {/* Gallery Grid — images render immediately (no scroll-reveal) so they are
-          always visible on first load, on every device. */}
-      <section className="py-16 px-4">
+      {/* Video Grid */}
+      <Reveal>
+        <section className="py-16 px-4">
           <div className="max-w-6xl mx-auto">
-            {/* Responsive sizing handled by the .gallery-grid class in globals.css:
-                ≥1030px fluid 4-col; 768–1030px 4-col shrinking 200→140px;
-                <768px a single stacked column at 515px (shrinking further). */}
-            <div className="gallery-grid">
-              {filteredItems.map((item, index) => (
+            {/* Rectangular video frames, 3 per row, shrinking with the width —
+                see .video-grid in globals.css */}
+            <div className="video-grid">
+              {filteredItems.map((item, index) => {
+                const ytId = youTubeId(item.video);
+                return (
+                <Reveal key={item.id} delay={index * 50}>
                   <button
-                    key={item.id}
                     type="button"
                     onClick={() => setLightboxIndex(index)}
-                    aria-label={`View ${item.title}`}
-                    className="group relative rounded-xl overflow-hidden shadow-md cursor-pointer h-full w-full text-left card-lift focus-visible:ring-2 focus-visible:ring-accent bg-gray-100"
+                    aria-label={`Play ${item.title}`}
+                    className="group relative rounded-xl overflow-hidden shadow-md cursor-pointer h-full w-full text-left card-lift focus-visible:ring-2 focus-visible:ring-accent bg-gray-900"
                   >
-                <div className="aspect-square relative">
-                  {/* plain <img> (loads immediately, like the videos page) */}
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className={`absolute inset-0 w-full h-full transition-transform duration-700 ${
-                      item.fit === "cover"
-                        ? "object-cover group-hover:scale-105"
-                        : item.fit === "zoom"
-                        ? "object-contain scale-x-[1.45] scale-y-[2.36]"
-                        : "object-contain group-hover:scale-105"
-                    }`}
-                  />
+                <div className="aspect-[516/281] relative">
+                  {ytId ? (
+                    // YouTube thumbnail
+                    /* eslint-disable-next-line @next/next/no-img-element */
+                    <img
+                      src={`https://img.youtube.com/vi/${ytId}/hqdefault.jpg`}
+                      alt={item.title}
+                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                  ) : (
+                    // direct video file — preload a frame as the thumbnail
+                    <video
+                      src={`${item.video}#t=0.5`}
+                      muted
+                      playsInline
+                      preload="metadata"
+                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                  )}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                </div>
-                <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                  <span className={`inline-block ${item.color} text-white text-xs font-bold px-2 py-1 rounded mb-2`}>
-                    {item.category.toUpperCase()}
-                  </span>
-                  <h3 className="text-white font-bold text-lg">{item.title}</h3>
-                </div>
-                <div className="absolute top-4 right-4 w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 scale-75 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300">
-                  <Camera className="w-5 h-5 text-white" />
+                  {/* Play indicator (always visible so it reads as a video) */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-14 h-14 rounded-full bg-black/40 backdrop-blur-sm flex items-center justify-center transition-all duration-300 group-hover:bg-accent group-hover:scale-110">
+                      <Play className="w-6 h-6 text-white ml-0.5" />
+                    </div>
+                  </div>
                 </div>
               </button>
-              ))}
+                </Reveal>
+                );
+              })}
             </div>
           </div>
         </section>
+      </Reveal>
 
       {/* Lightbox */}
       {activeItem && (
@@ -187,7 +184,7 @@ export default function Gallery() {
           {/* Prev */}
           <button
             onClick={(e) => { e.stopPropagation(); showPrev(); }}
-            aria-label="Previous image"
+            aria-label="Previous video"
             className="absolute left-3 md:left-6 z-10 w-11 h-11 md:w-12 md:h-12 rounded-full bg-white/10 hover:bg-accent text-white flex items-center justify-center transition-all hover:scale-110"
           >
             <ChevronLeft className="w-6 h-6" />
@@ -196,25 +193,36 @@ export default function Gallery() {
           {/* Next */}
           <button
             onClick={(e) => { e.stopPropagation(); showNext(); }}
-            aria-label="Next image"
+            aria-label="Next video"
             className="absolute right-3 md:right-6 z-10 w-11 h-11 md:w-12 md:h-12 rounded-full bg-white/10 hover:bg-accent text-white flex items-center justify-center transition-all hover:scale-110"
           >
             <ChevronRight className="w-6 h-6" />
           </button>
 
-          {/* Image + caption */}
+          {/* Video + caption */}
           <div
             className="relative w-full max-w-4xl animate-zoom-in"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="relative w-full h-[60vh] md:h-[72vh] rounded-xl overflow-hidden shadow-2xl">
-              <Image
-                src={activeItem.image}
-                alt={activeItem.title}
-                fill
-                className="object-contain"
-                sizes="(max-width: 768px) 100vw, 896px"
-              />
+            <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-2xl bg-black">
+              {youTubeId(activeItem.video) ? (
+                <iframe
+                  key={activeItem.video}
+                  src={`https://www.youtube.com/embed/${youTubeId(activeItem.video)}?autoplay=1&rel=0`}
+                  title={activeItem.title}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full"
+                />
+              ) : (
+                <video
+                  key={activeItem.video}
+                  src={activeItem.video}
+                  controls
+                  autoPlay
+                  className="w-full h-full object-contain"
+                />
+              )}
             </div>
             <div className="mt-4 text-center">
               <span className={`inline-block ${activeItem.color} text-white text-xs font-bold px-2.5 py-1 rounded mb-2`}>

@@ -80,7 +80,28 @@
       "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless --disable-gpu --hide-scrollbars --window-size=1860,1100 --screenshot=/tmp/cur.png \"http://localhost:3000/\")",
       "Bash(cp /tmp/cur.png ./cur.png)",
       "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless --disable-gpu --hide-scrollbars --window-size=1860,760 --screenshot=/tmp/match.png \"http://localhost:3000/\")",
-      "Bash(cp /tmp/match.png ./match.png)"
+      "Bash(cp /tmp/match.png ./match.png)",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless --disable-gpu --hide-scrollbars --window-size=1280,900 --screenshot=/tmp/gal4.png \"http://localhost:3000/gallery\")",
+      "Bash(cp /tmp/gal4.png ./gal4.png)",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless --disable-gpu --hide-scrollbars --window-size=1280,1750 --screenshot=/tmp/gal4b.png \"http://localhost:3000/gallery\")",
+      "Bash(cp /tmp/gal4b.png ./gal4b.png)",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless --disable-gpu --hide-scrollbars --window-size=1280,1750 --screenshot=/tmp/galsq.png \"http://localhost:3000/gallery\")",
+      "Bash(cp /tmp/galsq.png ./galsq.png)",
+      "Bash(curl -s -o /dev/null -w \"gallery:%{http_code}\\\\n\" http://localhost:3000/gallery)",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless --disable-gpu --hide-scrollbars --window-size=1280,1100 --screenshot=/tmp/galb.png \"http://localhost:3000/gallery\")",
+      "Bash(cp /tmp/galb.png ./galb.png)",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless --disable-gpu --hide-scrollbars --window-size=1280,1100 --screenshot=/tmp/galz.png \"http://localhost:3000/gallery\")",
+      "Bash(cp /tmp/galz.png ./galz.png)",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless --disable-gpu --hide-scrollbars --window-size=1280,1250 --screenshot=/tmp/gal200.png \"http://localhost:3000/gallery\")",
+      "Bash(cp /tmp/gal200.png ./gal200.png)",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless --disable-gpu --hide-scrollbars --window-size=1280,1250 --screenshot=/tmp/g_big.png \"http://localhost:3000/gallery\")",
+      "Bash(cp /tmp/g_big.png ./g_big.png)",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless --disable-gpu --hide-scrollbars --window-size=1000,1250 --screenshot=/tmp/g_small.png \"http://localhost:3000/gallery\")",
+      "Bash(cp /tmp/g_small.png ./g_small.png)",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless --disable-gpu --hide-scrollbars --window-size=1280,1100 --screenshot=/tmp/galstretch.png \"http://localhost:3000/gallery\")",
+      "Bash(cp /tmp/galstretch.png ./galstretch.png)",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless --disable-gpu --hide-scrollbars --window-size=1280,1100 --screenshot=/tmp/galsky.png \"http://localhost:3000/gallery\")",
+      "Bash(cp /tmp/galsky.png ./galsky.png)"
     ]
   }
 }
