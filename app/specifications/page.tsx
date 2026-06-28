@@ -3,9 +3,34 @@ import Image from "next/image";
 import { ChevronRight, BookOpen, Monitor, Bell, Library, FlaskConical, Music, Palette, Dumbbell, HeartHandshake } from "lucide-react";
 import Reveal from "@/components/Reveal";
 
+import JsonLd from "@/components/JsonLd";
+import { pageMetadata } from "@/lib/metadata";
+import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
+
+export const metadata = pageMetadata({
+  title: "Campus Facilities & Specifications",
+  description:
+    "Modern classrooms, a fully equipped computer lab, science labs and a spacious playground — explore the facilities at Sree Sree Educational Society, Eluru.",
+  path: "/specifications",
+});
+
 export default function Specifications() {
   return (
     <>
+      <JsonLd
+        data={[
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Specifications", path: "/specifications" },
+          ]),
+          webPageSchema({
+            title: "Campus Facilities at Sree Sree School, Eluru",
+            description:
+              "Classrooms, computer and science labs, and a spacious playground.",
+            path: "/specifications",
+          }),
+        ]}
+      />
       {/* Hero Section */}
       <section className="relative h-[320px] sm:h-[400px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">

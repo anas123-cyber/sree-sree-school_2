@@ -4,10 +4,45 @@ import Script from "next/script";
 import { ChevronRight, MapPin, Mail, Phone, Clock, Facebook, Instagram, Youtube, Twitter, Send } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import TextReveal from "@/components/TextReveal";
+import { SOCIAL_LINKS } from "@/lib/site";
+
+// Social icons wired to the central config. Only links you've filled in
+// (in lib/site.ts → SOCIAL_LINKS) render; empty ones are hidden automatically.
+const socials = [
+  { Icon: Facebook, href: SOCIAL_LINKS.facebook, label: "Facebook" },
+  { Icon: Instagram, href: SOCIAL_LINKS.instagram, label: "Instagram" },
+  { Icon: Youtube, href: SOCIAL_LINKS.youtube, label: "YouTube" },
+  { Icon: Twitter, href: SOCIAL_LINKS.twitter, label: "Twitter / X" },
+].filter((s) => s.href);
+
+import JsonLd from "@/components/JsonLd";
+import { pageMetadata } from "@/lib/metadata";
+import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
+
+export const metadata = pageMetadata({
+  title: "Contact & Admissions — Eluru, Andhra Pradesh",
+  description:
+    "Contact Sree Sree Educational Society, Eluru: Sriram Nagar, Sanivarapupeta; phone 08812-244084; email and admission enquiry form. Office open Mon–Sat, 9 AM–5 PM.",
+  path: "/contact",
+});
 
 export default function Contact() {
   return (
     <>
+      <JsonLd
+        data={[
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Contact", path: "/contact" },
+          ]),
+          webPageSchema({
+            title: "Contact & Admissions | Sree Sree Educational Society",
+            description:
+              "Address, phone, email and admission enquiry form for the school in Eluru.",
+            path: "/contact",
+          }),
+        ]}
+      />
       {/* Hero Section */}
       <section className="relative h-[320px] sm:h-[400px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
@@ -90,11 +125,22 @@ export default function Contact() {
               <h3 className="font-bold text-lg mb-2">Follow Us</h3>
               <p className="text-gray-400 text-sm mb-4">Stay connected through social media.</p>
               <div className="flex gap-3">
-                {[Facebook, Instagram, Youtube, Twitter].map((Icon, index) => (
-                  <a key={index} href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-accent transition-colors">
-                    <Icon className="w-5 h-5" />
-                  </a>
-                ))}
+                {socials.length > 0 ? (
+                  socials.map(({ Icon, href, label }) => (
+                    <a
+                      key={label}
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={label}
+                      className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-accent transition-colors"
+                    >
+                      <Icon className="w-5 h-5" />
+                    </a>
+                  ))
+                ) : (
+                  <p className="text-gray-500 text-xs italic">Social profiles coming soon.</p>
+                )}
               </div>
             </div>
           </div>

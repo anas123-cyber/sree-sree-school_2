@@ -28,7 +28,6 @@ export default function Footer() {
               <h4 className="font-semibold text-sm uppercase tracking-wider text-accent mb-3">Programs</h4>
               <ul className="space-y-2 text-sm text-gray-400">
                 <li>Primary School</li>
-                <li>Middle School</li>
                 <li>High School</li>
                 <li>Yoga & Pranayama</li>
               </ul>
@@ -43,6 +42,7 @@ export default function Footer() {
               <li><Link href="/about" className="hover:text-accent transition-colors">About</Link></li>
               <li><Link href="/achievements" className="hover:text-accent transition-colors">Achievements</Link></li>
               <li><Link href="/academics" className="hover:text-accent transition-colors">Academics</Link></li>
+              <li><Link href="/blog" className="hover:text-accent transition-colors">Blog</Link></li>
               <li><Link href="/gallery" className="hover:text-accent transition-colors">Gallery</Link></li>
               <li><Link href="/contact" className="hover:text-accent transition-colors">Contact</Link></li>
             </ul>

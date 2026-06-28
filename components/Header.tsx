@@ -11,6 +11,7 @@ const navLinks = [
   { name: "About", href: "/about" },
   { name: "Achievements", href: "/achievements" },
   { name: "Academics", href: "/academics" },
+  { name: "Blog", href: "/blog" },
 ];
 
 // Gallery splits into Images and Videos (same look & layout for both pages)
