@@ -68,9 +68,34 @@ const programs = [
   },
 ];
 
+import JsonLd from "@/components/JsonLd";
+import { pageMetadata } from "@/lib/metadata";
+import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
+
+export const metadata = pageMetadata({
+  title: "Co-curricular Activities — Robotics, Karate, Chess & Sports",
+  description:
+    "Beyond the classroom: robotics & AI, karate, chess, sports and ethical classes that build skills, discipline and confidence at Sree Sree School, Eluru.",
+  path: "/programs",
+});
+
 export default function Programs() {
   return (
     <>
+      <JsonLd
+        data={[
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Co-curricular Activities", path: "/programs" },
+          ]),
+          webPageSchema({
+            title: "Co-curricular Activities at Sree Sree School, Eluru",
+            description:
+              "Robotics & AI, karate, chess, sports and ethical classes beyond the classroom.",
+            path: "/programs",
+          }),
+        ]}
+      />
       {/* Hero Section */}
       <section className="relative h-[320px] sm:h-[420px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">

@@ -14,9 +14,34 @@ const offerings = [
   { icon: HeartHandshake, title: "Character & Values", desc: "Discipline, compassion, and citizenship at the heart of learning." },
 ];
 
+import JsonLd from "@/components/JsonLd";
+import { pageMetadata } from "@/lib/metadata";
+import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
+
+export const metadata = pageMetadata({
+  title: "Academics — Primary, Middle & High School Curriculum",
+  description:
+    "Explore academics at Sree Sree School, Eluru — a strong curriculum from Primary to High School with Yoga, science and computer labs, sports and character education.",
+  path: "/academics",
+});
+
 export default function Academics() {
   return (
     <>
+      <JsonLd
+        data={[
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Academics", path: "/academics" },
+          ]),
+          webPageSchema({
+            title: "Academics at Sree Sree School, Eluru",
+            description:
+              "Primary, Middle and High School curriculum with Yoga, labs, sports and values.",
+            path: "/academics",
+          }),
+        ]}
+      />
       {/* Hero Section */}
       <section className="relative h-[320px] sm:h-[400px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
@@ -117,45 +142,7 @@ export default function Academics() {
               </div>
             </div>
 
-            {/* Middle School */}
-            <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
-              <div className="md:order-2 group relative rounded-2xl overflow-hidden shadow-lg h-80">
-                <Image
-                  src="/1000228455.jpg"
-                  alt="Middle School"
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute top-4 right-4 bg-accent text-white text-sm font-bold px-4 py-1.5 rounded-full">
-                  Grade VI – VIII
-                </div>
-              </div>
-              <div className="md:order-1">
-                <p className="text-accent font-semibold uppercase tracking-wider text-sm mb-2">Fostering Critical Thinkers</p>
-                <h2 className="text-3xl font-serif font-bold text-primary mb-4">Middle School</h2>
-                <p className="text-gray-600 mb-6 leading-relaxed">
-                  The middle school years are a time of exploration and subject specialization, encouraging critical thinking and project-based learning.
-                </p>
-                <div className="grid grid-cols-2 gap-4 mb-6">
-                  {["Subject specialization", "Critical thinking", "Project-based learning", "Leadership development"].map((item) => (
-                    <div key={item} className="flex items-start gap-2">
-                      <div className="w-5 h-5 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <div className="w-2 h-2 bg-accent rounded-full" />
-                      </div>
-                      <span className="text-sm text-gray-700">{item}</span>
-                    </div>
-                  ))}
-                </div>
-                <div className="flex flex-wrap gap-2">
-                  {["Advanced Math", "Science", "Computer Science", "Languages", "Yoga", "Social Sciences"].map((subject) => (
-                    <span key={subject} className="bg-purple-50 text-purple-700 px-3 py-1 rounded-full text-xs font-medium">
-                      {subject}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
-
+           
             {/* High School */}
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="group relative rounded-2xl overflow-hidden shadow-lg h-80">

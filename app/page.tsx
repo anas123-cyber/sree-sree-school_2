@@ -9,10 +9,40 @@ import Marquee from "@/components/Marquee";
 import Testimonials from "@/components/Testimonials";
 import ConnectionHub from "@/components/ConnectionHub";
 import DeviceShowcase from "@/components/DeviceShowcase";
+import FAQSection from "@/components/FAQSection";
+import JsonLd from "@/components/JsonLd";
+import { pageMetadata } from "@/lib/metadata";
+import { faqSchema, webPageSchema } from "@/lib/schema";
+import { homeFaqs } from "@/lib/faqs";
+
+export const metadata = pageMetadata({
+  title: "Best School in Eluru | Sree Sree Educational Society (Since 1987)",
+  description:
+    "Sree Sree Educational Society is a leading holistic school in Eluru, Andhra Pradesh since 1987 — Primary, Middle & High School with Yoga, sports and value-based learning. Admissions open. Call 08812-244084.",
+  path: "/",
+  keywords: [
+    "best school in Eluru",
+    "Sree Sree Educational Society",
+    "schools in Eluru Andhra Pradesh",
+    "holistic school Eluru",
+    "school admissions Eluru",
+  ],
+});
 
 export default function Home() {
   return (
     <>
+      <JsonLd
+        data={[
+          webPageSchema({
+            title: "Sree Sree Educational Society | Best School in Eluru",
+            description:
+              "Holistic, values-based school in Eluru, Andhra Pradesh since 1987.",
+            path: "/",
+          }),
+          faqSchema(homeFaqs),
+        ]}
+      />
       {/* Dynamic Hero Slider Section */}
       <HeroSlider />
 
@@ -59,7 +89,6 @@ export default function Home() {
             items={[
               "Holistic Development",
               "Primary School",
-              "Middle School",
               "High School",
               "Yoga & Pranayama",
               "Since 1987",
@@ -203,7 +232,7 @@ export default function Home() {
               </h2>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className="grid sm:grid-cols-2 gap-8 mb-12 max-w-3xl mx-auto">
               {[
                 {
                   grade: "Grade I – V",
@@ -211,12 +240,7 @@ export default function Home() {
                   desc: "Play-based learning, group activities, and colorful resources to inspire curiosity and confidence in young minds.",
                   image: "/IMG-20260615-WA0051.jpg"
                 },
-                {
-                  grade: "Grade VI – VIII",
-                  title: "Middle School",
-                  desc: "Empowering students to excel academically, preparing them for high school and beyond with confidence and critical thinking.",
-                  image: "/IMG-20260615-WA0047.jpg"
-                },
+                
                 {
                   grade: "Grade IX – X",
                   title: "High School",
@@ -291,6 +315,12 @@ export default function Home() {
           </div>
         </section>
       </Reveal>
+
+      {/* FAQ Section — answer-engine optimized (AEO) */}
+      <FAQSection
+        faqs={homeFaqs}
+        heading="Questions parents ask about Sree Sree School"
+      />
 
       {/* CTA Section */}
       <Reveal>

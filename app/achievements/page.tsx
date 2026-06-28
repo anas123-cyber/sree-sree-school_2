@@ -3,9 +3,34 @@ import Image from "next/image";
 import Reveal from "@/components/Reveal";
 import CountUp from "@/components/CountUp";
 
+import JsonLd from "@/components/JsonLd";
+import { pageMetadata } from "@/lib/metadata";
+import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
+
+export const metadata = pageMetadata({
+  title: "Achievements & Awards",
+  description:
+    "50+ awards and decades of student success — explore the achievements that make Sree Sree Educational Society a trusted, leading school in Eluru, Andhra Pradesh.",
+  path: "/achievements",
+});
+
 export default function Achievements() {
   return (
     <>
+      <JsonLd
+        data={[
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Achievements", path: "/achievements" },
+          ]),
+          webPageSchema({
+            title: "Achievements & Awards | Sree Sree Educational Society",
+            description:
+              "Awards and student success that distinguish a leading school in Eluru.",
+            path: "/achievements",
+          }),
+        ]}
+      />
       {/* Hero Section */}
       <section className="relative h-[350px] md:h-[400px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
@@ -79,7 +104,7 @@ export default function Achievements() {
                 We are immensely proud to announce the outstanding results of our students in the SSC Board Examinations for the academic years 2022–2023 and 2023–2024. Our students have consistently secured top ranks, achieving remarkable scores of <strong className="text-primary">590, 584, 583, 575, and 574 marks</strong> respectively. 
               </p>
               <p>
-                Over the past 36 years, more than <strong className="text-primary">3,000 students</strong> from our institution have scored above 500 marks, a testament to our unwavering commitment to academic excellence and holistic development.
+                Over the past 36 years, more than <strong className="text-primary">10,000 students</strong> from our institution have scored above 500 marks, a testament to our unwavering commitment to academic excellence and holistic development.
               </p>
               <p>
                 Beyond board examinations, our students actively participate and excel in various state-level talent tests, Olympiads, and the Godavari talent tests. Year after year, many of our scholars secure prestigious state ranks, bringing honor and pride to the Sree Sree Educational Society family.

@@ -5,9 +5,34 @@ import Reveal from "@/components/Reveal";
 import TextReveal from "@/components/TextReveal";
 import DeviceShowcase from "@/components/DeviceShowcase";
 
+import JsonLd from "@/components/JsonLd";
+import { pageMetadata } from "@/lib/metadata";
+import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
+
+export const metadata = pageMetadata({
+  title: "About Us — Our Story, Mission & Legacy Since 1987",
+  description:
+    "Discover the story, mission and vision of Sree Sree Educational Society — a holistic, values-based school in Eluru, Andhra Pradesh nurturing young minds since 1987.",
+  path: "/about",
+});
+
 export default function About() {
   return (
     <>
+      <JsonLd
+        data={[
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "About Us", path: "/about" },
+          ]),
+          webPageSchema({
+            title: "About Sree Sree Educational Society",
+            description:
+              "The story, mission and legacy of a holistic school in Eluru since 1987.",
+            path: "/about",
+          }),
+        ]}
+      />
       {/* Hero Section */}
       <section className="relative h-[320px] sm:h-[400px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
@@ -85,9 +110,8 @@ export default function About() {
                 </li>
               </ul>
               <p className="text-gray-600 leading-relaxed mb-6">
-                With a profound vision for holistic education, Dr. M.B.S. Sarma founded the Sree Sree Educational Society in 1989. 
-                His dedication to blending traditional Indian values with modern educational practices has transformed the lives of 
-                thousands of students, creating a legacy of excellence and compassion that continues to thrive today.
+                Empowering Excellence through Education
+Established in 1987 by Dr. M.B.S. Sarma in Eluru, Sree Sree Education Institution began its journey as Sree Sree Academy of Languages with a vision to deliver quality education rooted in strong values. Dr. Sarma established Sree Sree Educational Society in 1989, laying the foundation for a legacy of academic distinction and holistic development. For over three decades, we have been dedicated to nurturing young minds with a balanced focus on academics, discipline, values, and creative expression.
               </p>
             </div>
           </div>
@@ -115,7 +139,7 @@ export default function About() {
                 { year: "1987", title: "The Beginning", desc: "Founding of Sree Sree Academy of Languages, laying the foundation for our educational journey." },
                 { year: "1989", title: "Society Established", desc: "Official registration of Sree Sree Educational Society, expanding our vision for holistic education." },
                 { year: "2000s", title: "Expansion of Programs", desc: "Introduction of Primary, Middle, and High School programs with state-of-the-art facilities." },
-                { year: "Today", title: "Three Decades Strong", desc: "Continued focus on holistic development, serving over 5,000 students with 100+ dedicated educators." },
+                { year: "Today", title: "Three Decades Strong", desc: "Continued focus on holistic development, serving over 10,000 students with 100+ dedicated educators." },
               ].map((item, index) => (
                 <div key={item.year} className={`relative flex items-start mb-12 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
                   <div className="absolute left-4 md:left-1/2 w-4 h-4 bg-accent rounded-full border-4 border-white shadow md:-translate-x-1/2 mt-1.5" />
