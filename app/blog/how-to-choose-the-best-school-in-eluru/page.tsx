@@ -80,7 +80,7 @@ export default function Page() {
       <h2>6. Location and commute</h2>
       <p>
         A long, tiring commute eats into study time, sleep and family time. For most Eluru
-        families, a school close to home — like our campus at Sriram Nagar, Sanivarapupeta
+        families, a school close to home — like our campus at Sriram Nagar 10th Road, Sanivarapupeta
         — is a practical advantage that pays off every single day.
       </p>
 

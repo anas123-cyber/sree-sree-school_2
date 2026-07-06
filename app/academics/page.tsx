@@ -19,7 +19,7 @@ import { pageMetadata } from "@/lib/metadata";
 import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
 
 export const metadata = pageMetadata({
-  title: "Academics — Primary, Middle & High School Curriculum",
+  title: "Academics — Primary & High School Curriculum",
   description:
     "Explore academics at Sree Sree School, Eluru — a strong curriculum from Primary to High School with Yoga, science and computer labs, sports and character education.",
   path: "/academics",
@@ -37,7 +37,7 @@ export default function Academics() {
           webPageSchema({
             title: "Academics at Sree Sree School, Eluru",
             description:
-              "Primary, Middle and High School curriculum with Yoga, labs, sports and values.",
+              "Primary and High School curriculum (Grades I–X) with Yoga, labs, sports and values.",
             path: "/academics",
           }),
         ]}
@@ -153,7 +153,7 @@ export default function Academics() {
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute top-4 left-4 bg-accent text-white text-sm font-bold px-4 py-1.5 rounded-full">
-                  Grade IX – X
+                  Grade VI – X
                 </div>
               </div>
               <div>

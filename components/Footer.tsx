@@ -54,7 +54,7 @@ export default function Footer() {
             <ul className="space-y-4 text-sm text-gray-400">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                <span>Sriram Nagar, Sanivarapupeta, Eluru, AP 534003</span>
+                <span>Sriram Nagar 10th Road, Sanivarapupeta, Eluru, AP 534003</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-accent flex-shrink-0" />
@@ -74,7 +74,7 @@ export default function Footer() {
           <div className="relative w-full h-48 md:h-56 rounded-2xl overflow-hidden border border-white/10 shadow-lg bg-gray-800">
             <iframe
               title="School Location Map"
-              src="https://maps.google.com/maps?q=Sree+Sree+Educational+Society,+Sriram+Nagar,+Sanivarapupeta,+Eluru,+Andhra+Pradesh+534003&t=&z=18&ie=UTF8&iwloc=B&output=embed"
+              src="https://maps.google.com/maps?q=Sree+Sree+Educational+Society,+Sriram+Nagar+10th+Road,+Sanivarapupeta,+Eluru,+Andhra+Pradesh+534003&t=&z=18&ie=UTF8&iwloc=B&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0, filter: "grayscale(20%) contrast(1.1)" }}
@@ -90,7 +90,7 @@ export default function Footer() {
                 <div>
                   <h4 className="font-bold text-sm mb-1">Sree Sree Educational Society</h4>
                   <p className="text-xs text-gray-600 leading-relaxed">
-                    Sriram Nagar, Sanivarapupeta,<br />
+                    Sriram Nagar 10th Road, Sanivarapupeta,<br />
                     Eluru, Andhra Pradesh 534003
                   </p>
                 </div>

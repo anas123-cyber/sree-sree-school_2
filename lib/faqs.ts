@@ -13,12 +13,12 @@ export const homeFaqs = [
   {
     question: "Where is Sree Sree Educational Society located?",
     answer:
-      "Sree Sree Educational Society is located at Sriram Nagar, Sanivarapupeta, Eluru, Andhra Pradesh 534003, India. The campus is easily reachable from across Eluru and welcomes visitors Monday to Saturday between 9:00 AM and 5:00 PM.",
+      "Sree Sree Educational Society is located at Sriram Nagar 10th Road, Sanivarapupeta, Eluru, Andhra Pradesh 534003, India. The campus is easily reachable from across Eluru and welcomes visitors Monday to Saturday between 9:00 AM and 5:00 PM.",
   },
   {
     question: "What grades and programs does Sree Sree School offer?",
     answer:
-      "The school offers education from Primary School (Grade I–V) and through High School (Grade VI–X). Alongside academics, students take part in Yoga and Pranayama, sports, robotics and AI, karate, chess and value-based ethical classes for all-round development.",
+      "The school offers education from Primary School (Grade I–V) through High School (Grade VI–X). Alongside academics, students take part in Yoga and Pranayama, sports, robotics and AI, karate, chess and value-based ethical classes for all-round development.",
   },
   {
     question: "When was Sree Sree Educational Society established?",
@@ -28,7 +28,7 @@ export const homeFaqs = [
   {
     question: "How can I apply for admission to Sree Sree School?",
     answer:
-      "Admissions are open across grades. You can apply by visiting the campus at Sriram Nagar, Sanivarapupeta, Eluru, calling 08812-244084, emailing sreesreeeducationsociety1987@gmail.com, or filling out the enquiry form on the Contact page. The admissions team responds within one business day.",
+      "Admissions are open across grades. You can apply by visiting the campus at Sriram Nagar 10th Road, Sanivarapupeta, Eluru, calling 08812-244084, emailing sreesreeeducationsociety1987@gmail.com, or filling out the enquiry form on the Contact page. The admissions team responds within one business day.",
   },
   {
     question: "What makes Sree Sree School different from other schools in Eluru?",

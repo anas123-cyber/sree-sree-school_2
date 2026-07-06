@@ -138,7 +138,7 @@ Established in 1987 by Dr. M.B.S. Sarma in Eluru, Sree Sree Education Institutio
               {[
                 { year: "1987", title: "The Beginning", desc: "Founding of Sree Sree Academy of Languages, laying the foundation for our educational journey." },
                 { year: "1989", title: "Society Established", desc: "Official registration of Sree Sree Educational Society, expanding our vision for holistic education." },
-                { year: "2000s", title: "Expansion of Programs", desc: "Introduction of Primary, Middle, and High School programs with state-of-the-art facilities." },
+                { year: "2000s", title: "Expansion of Programs", desc: "Introduction of Primary and High School programs with state-of-the-art facilities." },
                 { year: "Today", title: "Three Decades Strong", desc: "Continued focus on holistic development, serving over 10,000 students with 100+ dedicated educators." },
               ].map((item, index) => (
                 <div key={item.year} className={`relative flex items-start mb-12 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>

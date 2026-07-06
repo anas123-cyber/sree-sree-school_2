@@ -20,7 +20,7 @@ const galleryItems: {
   { id: 4, category: "Academics", title: "Academic Honors", image: "/1000228468.jpg", color: "bg-green-500" },
   { id: 5, category: "Cultural", title: "Independence Day", image: "/IMG-20260615-WA0049.jpg", color: "bg-blue-500" },
   { id: 6, category: "Academics", title: "Primary School Activities", image: "/IMG-20260615-WA0057.jpg", color: "bg-purple-500" },
-  { id: 7, category: "Academics", title: "Middle School Awards", image: "/1000228455.jpg", color: "bg-indigo-500" },
+  { id: 7, category: "Academics", title: "Academic Awards", image: "/1000228455.jpg", color: "bg-indigo-500" },
   { id: 8, category: "Meetings", title: "Meeting", image: "/IMG-20260615-WA0064.jpg", color: "bg-orange-500" },
   { id: 9, category: "Academics", title: "Academic Excellence", image: "/IMG-20260614-WA0029.jpg", color: "bg-teal-500" },
   { id: 10, category: "Leadership", title: "Dr. M.B.S. Sarma", image: "/1000228469.jpg", color: "bg-gray-600" },
