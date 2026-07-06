@@ -18,7 +18,7 @@ import { homeFaqs } from "@/lib/faqs";
 export const metadata = pageMetadata({
   title: "Best School in Eluru | Sree Sree Educational Society (Since 1987)",
   description:
-    "Sree Sree Educational Society is a leading holistic school in Eluru, Andhra Pradesh since 1987 — Primary, Middle & High School with Yoga, sports and value-based learning. Admissions open. Call 08812-244084.",
+    "Sree Sree Educational Society is a leading holistic school in Eluru, Andhra Pradesh since 1987 — Primary & High School (Grades I–X) with Yoga, sports and value-based learning. Admissions open. Call 08812-244084.",
   path: "/",
   keywords: [
     "best school in Eluru",
@@ -60,7 +60,7 @@ export default function Home() {
             <div className="text-center group">
               <Users className="w-8 h-8 text-accent mx-auto mb-3 transition-transform group-hover:scale-110 duration-300" />
               <p className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-primary mb-1 tracking-tight">
-                <CountUp target={5000} />+
+                <CountUp target={10000} />+
               </p>
               <p className="text-sm text-gray-600 font-medium uppercase tracking-wide">Students Empowered</p>
             </div>
@@ -242,7 +242,7 @@ export default function Home() {
                 },
                 
                 {
-                  grade: "Grade IX – X",
+                  grade: "Grade VI – X",
                   title: "High School",
                   desc: "Subject proficiency combined with spiritual practices like Yoga and Pranayama for holistic personality development.",
                   image: "/IMG-20260615-WA0061.jpg"

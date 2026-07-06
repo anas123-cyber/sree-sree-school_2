@@ -11,16 +11,16 @@
 // 1) The live production URL — NO trailing slash. Used for canonical URLs,
 //    sitemap, Open Graph image URLs and structured data @id's.
 //    TODO: replace with your real domain once it is live.
-export const SITE_URL = "https://www.sreesreeschool.com";
+export const SITE_URL = "https://www.sreesreeeducationalsociety.com";
 
 // 2) Real social profile URLs. These become the `sameAs` array in structured
 //    data — a strong identity signal for Google and AI answer engines.
 //    Leave a URL as "" (empty string) to omit it.
 export const SOCIAL_LINKS = {
   facebook: "", // e.g. "https://www.facebook.com/sreesreeschool"
-  instagram: "", // e.g. "https://www.instagram.com/sreesreeschool"
-  youtube: "", // e.g. "https://www.youtube.com/@sreesreeschool"
-  twitter: "", // e.g. "https://twitter.com/sreesreeschool"
+  instagram: "https://www.instagram.com/sree_sree_school_eluru",
+  youtube: "https://youtube.com/@sreesree125", // ?si= share param stripped for a clean canonical URL
+  twitter: "",
 };
 
 // ── The rest is derived from facts already on the site. ───────────────────
@@ -38,13 +38,13 @@ export const SITE = {
   logo: "/logo.jpg",
   foundingYear: "1987",
   description:
-    "Sree Sree Educational Society is a holistic, values-based school in Eluru, Andhra Pradesh, established in 1987. We offer Primary, Middle and High School education with Yoga, Pranayama, sports and co-curricular programs.",
+    "Sree Sree Educational Society is a holistic, values-based school in Eluru, Andhra Pradesh, established in 1987. We offer Primary and High School education (Grades I–X) with Yoga, Pranayama, sports and co-curricular programs.",
   /** Telephone in human and dial formats */
   phone: "08812-244084",
   phoneDial: "+918812244084",
   email: "sreesreeeducationsociety1987@gmail.com",
   address: {
-    street: "Sriram Nagar, Sanivarapupeta",
+    street: "Sriram Nagar 10th Road, Sanivarapupeta",
     locality: "Eluru",
     region: "Andhra Pradesh",
     postalCode: "534003",
