@@ -101,7 +101,8 @@
       "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless --disable-gpu --hide-scrollbars --window-size=1280,1100 --screenshot=/tmp/galstretch.png \"http://localhost:3000/gallery\")",
       "Bash(cp /tmp/galstretch.png ./galstretch.png)",
       "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless --disable-gpu --hide-scrollbars --window-size=1280,1100 --screenshot=/tmp/galsky.png \"http://localhost:3000/gallery\")",
-      "Bash(cp /tmp/galsky.png ./galsky.png)"
+      "Bash(cp /tmp/galsky.png ./galsky.png)",
+      "Bash(npx next *)"
     ]
   }
 }
