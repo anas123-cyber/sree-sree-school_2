@@ -103,11 +103,13 @@ export default function Header() {
                 priority
               />
             </div>
-            <div className="block">
-              <h1 className="font-serif font-bold text-lg sm:text-xl leading-tight text-brand-red tracking-tight">
+            <div className="block leading-none">
+              <h1 className="font-serif font-black text-[2.1rem] sm:text-[2.7rem] leading-none text-brand-red tracking-[-0.06em]">
                 Sree Sree
               </h1>
-              <p className="text-[9px] sm:text-[11px] font-semibold uppercase tracking-[0.12em] sm:tracking-[0.2em] text-brand-blue">Educational Society</p>
+              <p className="mt-0.5 text-[10px] sm:text-[11px] font-black uppercase tracking-[0.16em] sm:tracking-[0.24em] text-brand-blue">
+                Educational Society
+              </p>
             </div>
           </Link>
 
