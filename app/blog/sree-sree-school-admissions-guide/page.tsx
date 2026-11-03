@@ -13,7 +13,7 @@ export const metadata = pageMetadata({
   image: post.image,
   article: true,
   keywords: [
-    "Sree Sree School admission",
+    "SREE SREE School admission",
     "school admission Eluru",
     "how to apply to school in Eluru",
     "school admission process",
@@ -29,7 +29,7 @@ export default function Page() {
         For most families, choosing a school is the easy part. Actually starting the
         admission is where the nerves creep in — the paperwork, the &ldquo;are we too
         late?&rdquo;, the worry that it&rsquo;s all going to be complicated. We promise you
-        it isn&rsquo;t. Here&rsquo;s exactly how admission works at Sree Sree, in plain words,
+        it isn&rsquo;t. Here&rsquo;s exactly how admission works at SREE SREE, in plain words,
         so you know what to expect before you even pick up the phone.
       </p>
 

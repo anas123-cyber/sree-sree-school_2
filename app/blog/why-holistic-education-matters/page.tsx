@@ -93,7 +93,7 @@ export default function Page() {
         how a child shows up for the rest of the day.
       </p>
       <p>
-        At Sree Sree Educational Society, Yoga and Pranayama are a daily part of school
+        At SREE SREE Educational Society, Yoga and Pranayama are a daily part of school
         life — a habit we believe pays dividends well beyond the classroom. You can read
         more about our approach on the <Link href="/academics">Academics</Link> page.
       </p>
@@ -115,9 +115,9 @@ export default function Page() {
         <li>Is success defined more broadly than exam ranks alone?</li>
       </ul>
 
-      <h2>The Sree Sree approach</h2>
+      <h2>The SREE SREE approach</h2>
       <p>
-        For more than three decades, Sree Sree Educational Society in Eluru has built its
+        For more than three decades, SREE SREE Educational Society in Eluru has built its
         identity around exactly this balance: strong academics, daily yoga, sports,
         creative arts and a deep commitment to values. We believe the goal of education is
         not just to help a child pass — but to help a child <strong>flourish</strong>.

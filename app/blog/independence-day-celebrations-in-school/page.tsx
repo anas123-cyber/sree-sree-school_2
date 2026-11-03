@@ -174,7 +174,7 @@ export default function Page() {
         will remember for the rest of their lives.
       </p>
       <p>
-        You can see how this fits into the rest of a year at Sree Sree in{" "}
+        You can see how this fits into the rest of a year at SREE SREE in{" "}
         <Link href="/blog/a-day-in-the-life-at-sree-sree-school">a day in the life</Link>, or
         have a look at our <Link href="/gallery">photo gallery</Link>.
       </p>

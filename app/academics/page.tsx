@@ -21,7 +21,7 @@ import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
 export const metadata = pageMetadata({
   title: "Academics — Primary & High School Curriculum",
   description:
-    "Explore academics at Sree Sree School, Eluru — a strong curriculum from Primary to High School with Yoga, science and computer labs, sports and character education.",
+    "Explore academics at SREE SREE School, Eluru — a strong curriculum from Primary to High School with Yoga, science and computer labs, sports and character education.",
   path: "/academics",
 });
 
@@ -35,7 +35,7 @@ export default function Academics() {
             { name: "Academics", path: "/academics" },
           ]),
           webPageSchema({
-            title: "Academics at Sree Sree School, Eluru",
+            title: "Academics at SREE SREE School, Eluru",
             description:
               "Primary and High School curriculum (Grades I–X) with Yoga, labs, sports and values.",
             path: "/academics",

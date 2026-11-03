@@ -52,7 +52,7 @@ const slides: Slide[] = [
         Moments of <span className="text-accent">Pride</span>
       </>
     ),
-    subtitle: "Celebrating the legacy of Sree Sree Educational Society",
+    subtitle: "Celebrating the legacy of SREE SREE Educational Society",
   },
 ];
 

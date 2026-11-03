@@ -171,7 +171,7 @@ export default function Page() {
         ten. It&rsquo;s one of the highest-return ten minutes in your child&rsquo;s day.
       </p>
       <p>
-        Want to see how a school day fits together at Sree Sree? Read{" "}
+        Want to see how a school day fits together at SREE SREE? Read{" "}
         <Link href="/blog/a-day-in-the-life-at-sree-sree-school">a day in the life here</Link>,
         or <Link href="/contact">come and visit us in Eluru</Link>.
       </p>

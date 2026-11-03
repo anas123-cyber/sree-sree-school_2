@@ -40,9 +40,9 @@ const faqs = [
       "Yes. A well-run English-medium school is designed for exactly this situation and does not assume English is spoken at home. What it does require is a school that explains concepts in a way your child understands, gives extra support in the early grades, and communicates with you in the language you are comfortable with.",
   },
   {
-    question: "How are languages taught at Sree Sree Educational Society?",
+    question: "How are languages taught at SREE SREE Educational Society?",
     answer:
-      "Sree Sree Educational Society in Eluru teaches English, Telugu and Hindi as full subjects from the primary years onward, and its teachers are free to explain a concept in whichever language a child understands best. Parents can confirm the exact medium of instruction for a given grade by calling the school office on 08812-244084.",
+      "SREE SREE Educational Society in Eluru teaches English, Telugu and Hindi as full subjects from the primary years onward, and its teachers are free to explain a concept in whichever language a child understands best. Parents can confirm the exact medium of instruction for a given grade by calling the school office on 08812-244084.",
   },
 ];
 
@@ -167,7 +167,7 @@ export default function Page() {
         where nobody does. The label is not the education. The teacher is.
       </p>
       <p>
-        At Sree Sree, English, Telugu and Hindi are all taught as full subjects from the
+        At SREE SREE, English, Telugu and Hindi are all taught as full subjects from the
         primary years, and our teachers use whichever language gets the idea into a
         child&rsquo;s head. You can see how that works in a real classroom — come and{" "}
         <Link href="/contact">visit us on a working day</Link>, not an open day.
@@ -187,7 +187,7 @@ export default function Page() {
         English deliberately in the early grades rather than assuming children arrive with
         it.
       </p>
-      <h3>How are languages taught at Sree Sree Educational Society?</h3>
+      <h3>How are languages taught at SREE SREE Educational Society?</h3>
       <p>
         English, Telugu and Hindi are each taught as full subjects, and teachers explain
         concepts in whichever language a child follows best. See our{" "}

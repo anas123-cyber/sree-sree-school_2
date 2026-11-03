@@ -10,7 +10,7 @@ import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
 export const metadata = pageMetadata({
   title: "Achievements & Awards",
   description:
-    "50+ awards and decades of student success — explore the achievements that make Sree Sree Educational Society a trusted, leading school in Eluru, Andhra Pradesh.",
+    "50+ awards and decades of student success — explore the achievements that make SREE SREE Educational Society a trusted, leading school in Eluru, Andhra Pradesh.",
   path: "/achievements",
 });
 
@@ -24,7 +24,7 @@ export default function Achievements() {
             { name: "Achievements", path: "/achievements" },
           ]),
           webPageSchema({
-            title: "Achievements & Awards | Sree Sree Educational Society",
+            title: "Achievements & Awards | SREE SREE Educational Society",
             description:
               "Awards and student success that distinguish a leading school in Eluru.",
             path: "/achievements",
@@ -90,7 +90,7 @@ export default function Achievements() {
             <div className="flex items-center gap-2 mb-3">
               <div className="w-2 h-2 rotate-45 bg-teal-600" />
               <span className="text-teal-600 font-bold uppercase tracking-wider text-sm">
-                Sree Sree Educational Society
+                SREE SREE Educational Society
               </span>
             </div>
             
@@ -107,7 +107,7 @@ export default function Achievements() {
                 Over the past 36 years, more than <strong className="text-primary">10,000 students</strong> from our institution have scored above 500 marks, a testament to our unwavering commitment to academic excellence and holistic development.
               </p>
               <p>
-                Beyond board examinations, our students actively participate and excel in various state-level talent tests, Olympiads, and the Godavari talent tests. Year after year, many of our scholars secure prestigious state ranks, bringing honor and pride to the Sree Sree Educational Society family.
+                Beyond board examinations, our students actively participate and excel in various state-level talent tests, Olympiads, and the Godavari talent tests. Year after year, many of our scholars secure prestigious state ranks, bringing honor and pride to the SREE SREE Educational Society family.
               </p>
             </div>
 

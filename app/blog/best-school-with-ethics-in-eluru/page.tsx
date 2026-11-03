@@ -17,7 +17,7 @@ export const metadata = pageMetadata({
     "value based school in Eluru",
     "school with moral values Eluru",
     "ethics education for children",
-    "Sree Sree School Eluru",
+    "SREE SREE School Eluru",
   ],
 });
 
@@ -108,7 +108,7 @@ export default function Page() {
       </p>
       <p>
         For nearly four decades in Eluru, that belief has been the quiet centre of everything
-        at Sree Sree Educational Society. You can read more about{" "}
+        at SREE SREE Educational Society. You can read more about{" "}
         <Link href="/about">who we are</Link> and our approach to{" "}
         <Link href="/academics">academics and values</Link> — or, better still, come and see
         it for yourself.

@@ -17,7 +17,7 @@ export const metadata = pageMetadata({
     "schools in Eluru",
     "school admissions Eluru",
     "CBSE schools Eluru",
-    "Sree Sree School Eluru",
+    "SREE SREE School Eluru",
   ],
 });
 
@@ -47,7 +47,7 @@ export default function Page() {
         Marks fade; character lasts. The best schools in Eluru pair academics with
         deliberate character-building — honesty, discipline, empathy and responsibility.
         Ask whether values education is a timetabled part of school life or just a poster
-        on the wall. At Sree Sree Educational Society, ethical classes and daily{" "}
+        on the wall. At SREE SREE Educational Society, ethical classes and daily{" "}
         <Link href="/academics">Yoga and Pranayama</Link> are built into the routine,
         not bolted on.
       </p>
@@ -72,7 +72,7 @@ export default function Page() {
       <p>
         Good infrastructure supports good learning. Bright, well-ventilated classrooms,
         a stocked library, science and computer labs, and a proper playground all make a
-        difference. You can see Sree Sree&rsquo;s{" "}
+        difference. You can see SREE SREE&rsquo;s{" "}
         <Link href="/specifications">classrooms, computer lab and playground</Link> on
         our facilities page.
       </p>
@@ -96,7 +96,7 @@ export default function Page() {
       <p>
         A school&rsquo;s history tells you a lot. How long has it served the community? What
         do alumni and current parents say? A school that has educated families across
-        generations has earned that trust. Sree Sree has been part of Eluru since{" "}
+        generations has earned that trust. SREE SREE has been part of Eluru since{" "}
         <strong>1987</strong> — see our <Link href="/achievements">achievements</Link> and{" "}
         <Link href="/about">story</Link>.
       </p>
@@ -126,9 +126,9 @@ export default function Page() {
         <li>Is the fee structure clear and transparent?</li>
       </ul>
 
-      <h2>Why parents in Eluru choose Sree Sree</h2>
+      <h2>Why parents in Eluru choose SREE SREE</h2>
       <p>
-        For more than 38 years, Sree Sree Educational Society has combined a strong
+        For more than 38 years, SREE SREE Educational Society has combined a strong
         academic foundation with values, Yoga, sports and modern facilities — educating
         over 10,000 students with the support of 100+ dedicated teachers. If you are
         weighing your options, we&rsquo;d be glad to show you around.{" "}

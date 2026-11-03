@@ -13,9 +13,9 @@ export const metadata = pageMetadata({
   article: true,
   keywords: [
     "school life Eluru",
-    "day at Sree Sree School",
+    "day at SREE SREE School",
     "school routine",
-    "Sree Sree Educational Society",
+    "SREE SREE Educational Society",
     "best school in Eluru",
     "school activities Eluru",
   ],
@@ -28,7 +28,7 @@ export default function Page() {
         When you&rsquo;re choosing a school, you read a lot of lists — subjects, facilities,
         timings. But what a parent really wants to know is simpler and harder to put on
         paper: <em>what will my child&rsquo;s day actually feel like?</em> So let&rsquo;s put
-        the brochure aside and walk through an ordinary day at Sree Sree, from the first
+        the brochure aside and walk through an ordinary day at SREE SREE, from the first
         bell to the last wave goodbye.
       </p>
 
@@ -112,7 +112,7 @@ export default function Page() {
         spilling out to waiting parents.
       </p>
       <p>
-        That&rsquo;s a day at Sree Sree — not extraordinary, just good, the kind of day that
+        That&rsquo;s a day at SREE SREE — not extraordinary, just good, the kind of day that
         quietly stacks up into a childhood. If you&rsquo;d like to see one for yourself, our
         gates are open. <Link href="/contact">Come and visit us in Eluru.</Link>
       </p>

@@ -7,7 +7,7 @@ import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
 export const metadata = pageMetadata({
   title: "Photo Gallery — Campus, Events & Student Life",
   description:
-    "Browse photos of campus life, events and facilities at Sree Sree Educational Society, Eluru — classrooms, labs, the playground and school celebrations.",
+    "Browse photos of campus life, events and facilities at SREE SREE Educational Society, Eluru — classrooms, labs, the playground and school celebrations.",
   path: "/gallery",
 });
 
@@ -25,7 +25,7 @@ export default function GalleryLayout({
             { name: "Gallery", path: "/gallery" },
           ]),
           webPageSchema({
-            title: "Photo Gallery | Sree Sree Educational Society",
+            title: "Photo Gallery | SREE SREE Educational Society",
             description:
               "Photos of campus life, events and facilities at the school in Eluru.",
             path: "/gallery",

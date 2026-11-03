@@ -86,7 +86,7 @@ export default function Videos() {
           </div>
           <h1 className="text-4xl md:text-5xl font-serif font-bold text-white mb-4 text-shadow-hero">Videos</h1>
           <p className="text-gray-300 max-w-2xl mx-auto">
-            A glimpse into life at Sree Sree — events, celebrations, achievements, and everyday moments.
+            A glimpse into life at SREE SREE — events, celebrations, achievements, and everyday moments.
           </p>
         </div>
       </section>

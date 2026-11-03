@@ -19,7 +19,7 @@ export const metadata = pageMetadata({
     "Grade 1 admission Eluru",
     "primary education Andhra Pradesh",
     "choosing a primary school",
-    "Sree Sree School primary",
+    "SREE SREE School primary",
   ],
 });
 
@@ -37,7 +37,7 @@ const faqs = [
   {
     question: "Which grade does primary school start at in Andhra Pradesh?",
     answer:
-      "Primary school in Andhra Pradesh covers Grade I to Grade V, typically starting at age five or six. Sree Sree Educational Society in Eluru offers Primary School from Grade I to V and High School from Grade VI to X.",
+      "Primary school in Andhra Pradesh covers Grade I to Grade V, typically starting at age five or six. SREE SREE Educational Society in Eluru offers Primary School from Grade I to V and High School from Grade VI to X.",
   },
   {
     question: "How do I choose a primary school in Eluru?",
@@ -197,7 +197,7 @@ export default function Page() {
       </p>
       <h3>Which grades does primary school cover in Andhra Pradesh?</h3>
       <p>
-        Grade I to Grade V. Sree Sree Educational Society offers Primary (I&ndash;V) and High
+        Grade I to Grade V. SREE SREE Educational Society offers Primary (I&ndash;V) and High
         School (VI&ndash;X) — see our <Link href="/academics">academics page</Link>.
       </p>
       <p>

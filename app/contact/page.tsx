@@ -22,7 +22,7 @@ import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
 export const metadata = pageMetadata({
   title: "Contact & Admissions — Eluru, Andhra Pradesh",
   description:
-    "Contact Sree Sree Educational Society, Eluru: Sriram Nagar 10th Road, Sanivarapupeta; phone 08812-244084; email and admission enquiry form. Office open Mon–Sat, 9 AM–5 PM.",
+    "Contact SREE SREE Educational Society, Eluru: Sriram Nagar 10th Road, Sanivarapupeta; phone 08812-244084; email and admission enquiry form. Office open Mon–Sat, 9 AM–5 PM.",
   path: "/contact",
 });
 
@@ -36,7 +36,7 @@ export default function Contact() {
             { name: "Contact", path: "/contact" },
           ]),
           webPageSchema({
-            title: "Contact & Admissions | Sree Sree Educational Society",
+            title: "Contact & Admissions | SREE SREE Educational Society",
             description:
               "Address, phone, email and admission enquiry form for the school in Eluru.",
             path: "/contact",
@@ -231,7 +231,7 @@ export default function Contact() {
           
           <div className="rounded-2xl overflow-hidden shadow-lg border border-gray-200 h-96 relative">
             <iframe
-              title="Sree Sree Educational Society Location"
+              title="SREE SREE Educational Society Location"
               src="https://maps.google.com/maps?q=Sree+Sree+Educational+Society,+Sriram+Nagar+10th+Road,+Sanivarapupeta,+Eluru,+Andhra+Pradesh+534003&t=&z=18&ie=UTF8&iwloc=B&output=embed"
               width="100%"
               height="100%"
