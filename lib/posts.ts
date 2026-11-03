@@ -27,6 +27,90 @@ export type PostMeta = {
 
 export const posts: PostMeta[] = [
   {
+    slug: "why-telugu-matters-in-an-english-medium-world",
+    title: "Why Telugu Still Matters in an English-Medium World",
+    description:
+      "English opens doors, but a strong mother tongue gives a child roots. Here's why you don't have to choose between the two — and simple ways to keep Telugu alive at home.",
+    date: "2026-10-31",
+    dateLabel: "October 31, 2026",
+    readingTime: "5 min read",
+    image: "/blog-telugu.png",
+    category: "Learning & Values",
+    author: "SREE SREE Educational Society",
+  },
+  {
+    slug: "national-unity-day-teaching-children-togetherness",
+    title: "National Unity Day: Teaching Children What Togetherness Really Means",
+    description:
+      "A class is a small India. On National Unity Day, here's how to help children understand that unity doesn't mean everyone being the same — it means everyone belonging.",
+    date: "2026-10-31",
+    dateLabel: "October 31, 2026",
+    readingTime: "4 min read",
+    image: "/blog-unity-day.png",
+    category: "School Life",
+    author: "SREE SREE Educational Society",
+  },
+  {
+    slug: "helping-shy-children-speak-with-confidence",
+    title: "Helping a Shy Child Speak Up With Confidence",
+    description:
+      "Some children know the answer and never raise a hand. Gentle, practical ways parents can help a quiet child find their voice — without pushing them onto a stage.",
+    date: "2026-10-30",
+    dateLabel: "October 30, 2026",
+    readingTime: "6 min read",
+    image: "/blog-shy-children.png",
+    category: "Parenting & Values",
+    author: "SREE SREE Educational Society",
+  },
+  {
+    slug: "why-sleep-matters-more-than-extra-study-hours",
+    title: "Why Sleep Matters More Than Extra Study Hours",
+    description:
+      "When exams are near, sleep is the first thing families trim. Here's why a rested child often outperforms a tired one who studied longer — and how to build a healthy bedtime routine.",
+    date: "2026-10-29",
+    dateLabel: "October 29, 2026",
+    readingTime: "5 min read",
+    image: "/blog-sleep.png",
+    category: "Wellbeing",
+    author: "SREE SREE Educational Society",
+  },
+  {
+    slug: "a-safe-and-meaningful-diwali-for-school-children",
+    title: "A Safe and Meaningful Diwali for School Children",
+    description:
+      "Diwali is a festival of light and joy. Simple ways to keep your child safe this season — and to let the festival teach kindness, sharing and meaning.",
+    date: "2026-10-28",
+    dateLabel: "October 28, 2026",
+    readingTime: "5 min read",
+    image: "/blog-diwali.png",
+    category: "School Life",
+    author: "SREE SREE Educational Society",
+  },
+  {
+    slug: "half-yearly-exam-preparation-plan-for-parents",
+    title: "Half-Yearly Exams: A Calm 3-Week Plan for Parents",
+    description:
+      "Exams don't need a frantic final week. A simple three-week approach — map, practise, revise — that helps your child prepare with confidence instead of panic.",
+    date: "2026-10-27",
+    dateLabel: "October 27, 2026",
+    readingTime: "6 min read",
+    image: "/blog-half-yearly-exams.png",
+    category: "Exams & Study",
+    author: "SREE SREE Educational Society",
+  },
+  {
+    slug: "keeping-children-learning-during-dussehra-holidays",
+    title: "Dussehra Holidays: Keeping Your Child Learning Without the Stress",
+    description:
+      "A festival break should be a real rest, but it shouldn't make the first week back painful. Easy, low-pressure ways to keep young minds active over the holidays.",
+    date: "2026-10-26",
+    dateLabel: "October 26, 2026",
+    readingTime: "5 min read",
+    image: "/blog-dussehra-holidays.png",
+    category: "Learning & Values",
+    author: "SREE SREE Educational Society",
+  },
+  {
     slug: "high-school-in-eluru-grades-6-to-10",
     title: "High School in Eluru: What Grades 6 to 10 Should Give Your Child",
     description:
@@ -36,7 +120,7 @@ export const posts: PostMeta[] = [
     readingTime: "8 min read",
     image: "/1000228455.jpg",
     category: "School Choice",
-    author: "Sree Sree Educational Society",
+    author: "SREE SREE Educational Society",
   },
   {
     slug: "independence-day-celebrations-in-school",
@@ -48,7 +132,7 @@ export const posts: PostMeta[] = [
     readingTime: "5 min read",
     image: "/1000228461.jpg",
     category: "School Life",
-    author: "Sree Sree Educational Society",
+    author: "SREE SREE Educational Society",
   },
   {
     slug: "helping-children-handle-exam-stress",
@@ -60,7 +144,7 @@ export const posts: PostMeta[] = [
     readingTime: "7 min read",
     image: "/1000228463.jpg",
     category: "Wellbeing",
-    author: "Sree Sree Educational Society",
+    author: "SREE SREE Educational Society",
   },
   {
     slug: "making-the-most-of-parent-teacher-meetings",
@@ -72,7 +156,7 @@ export const posts: PostMeta[] = [
     readingTime: "6 min read",
     image: "/1000228467.jpg",
     category: "Parenting & Values",
-    author: "Sree Sree Educational Society",
+    author: "SREE SREE Educational Society",
   },
   {
     slug: "building-a-reading-habit-in-children",
@@ -84,7 +168,7 @@ export const posts: PostMeta[] = [
     readingTime: "6 min read",
     image: "/1000228468.jpg",
     category: "Learning & Values",
-    author: "Sree Sree Educational Society",
+    author: "SREE SREE Educational Society",
   },
   {
     slug: "school-safety-questions-every-parent-should-ask",
@@ -96,7 +180,7 @@ export const posts: PostMeta[] = [
     readingTime: "7 min read",
     image: "/1000228469.jpg",
     category: "Safety",
-    author: "Sree Sree Educational Society",
+    author: "SREE SREE Educational Society",
   },
   {
     slug: "why-we-teach-chess-to-every-child",
@@ -108,7 +192,7 @@ export const posts: PostMeta[] = [
     readingTime: "5 min read",
     image: "/1000228470.jpg",
     category: "Beyond the Classroom",
-    author: "Sree Sree Educational Society",
+    author: "SREE SREE Educational Society",
   },
   {
     slug: "karate-at-school-confidence-and-discipline",
@@ -120,7 +204,7 @@ export const posts: PostMeta[] = [
     readingTime: "5 min read",
     image: "/1000228481.jpg",
     category: "Beyond the Classroom",
-    author: "Sree Sree Educational Society",
+    author: "SREE SREE Educational Society",
   },
   {
     slug: "robotics-and-ai-for-school-children",
@@ -132,7 +216,7 @@ export const posts: PostMeta[] = [
     readingTime: "6 min read",
     image: "/1000228485.jpg",
     category: "Learning & Values",
-    author: "Sree Sree Educational Society",
+    author: "SREE SREE Educational Society",
   },
   {
     slug: "primary-school-in-eluru-grades-1-to-5",
@@ -144,7 +228,7 @@ export const posts: PostMeta[] = [
     readingTime: "7 min read",
     image: "/1000228489.jpg",
     category: "School Choice",
-    author: "Sree Sree Educational Society",
+    author: "SREE SREE Educational Society",
   },
   {
     slug: "healthy-school-lunchbox-ideas-andhra",
@@ -156,7 +240,7 @@ export const posts: PostMeta[] = [
     readingTime: "6 min read",
     image: "/IMG-20260614-WA0029.jpg",
     category: "Health & Nutrition",
-    author: "Sree Sree Educational Society",
+    author: "SREE SREE Educational Society",
   },
   {
     slug: "does-my-child-really-need-tuition",
@@ -168,7 +252,7 @@ export const posts: PostMeta[] = [
     readingTime: "6 min read",
     image: "/IMG-20260614-WA0032.jpg",
     category: "Parenting & Values",
-    author: "Sree Sree Educational Society",
+    author: "SREE SREE Educational Society",
   },
   {
     slug: "helping-your-child-prepare-for-fa1-exams",
@@ -180,7 +264,7 @@ export const posts: PostMeta[] = [
     readingTime: "6 min read",
     image: "/IMG-20260614-WA0034.jpg",
     category: "Exams & Study",
-    author: "Sree Sree Educational Society",
+    author: "SREE SREE Educational Society",
   },
   {
     slug: "screen-time-rules-that-actually-work",
@@ -192,7 +276,7 @@ export const posts: PostMeta[] = [
     readingTime: "6 min read",
     image: "/IMG-20260618-WA0047.jpg",
     category: "Parenting & Values",
-    author: "Sree Sree Educational Society",
+    author: "SREE SREE Educational Society",
   },
   {
     slug: "how-much-homework-is-too-much",
@@ -204,7 +288,7 @@ export const posts: PostMeta[] = [
     readingTime: "6 min read",
     image: "/x.jpg",
     category: "Learning & Values",
-    author: "Sree Sree Educational Society",
+    author: "SREE SREE Educational Society",
   },
   {
     slug: "monsoon-health-tips-for-school-children",
@@ -216,7 +300,7 @@ export const posts: PostMeta[] = [
     readingTime: "6 min read",
     image: "/y.jpg",
     category: "Health & Nutrition",
-    author: "Sree Sree Educational Society",
+    author: "SREE SREE Educational Society",
   },
   {
     slug: "mid-year-school-admission-in-eluru",
@@ -228,7 +312,7 @@ export const posts: PostMeta[] = [
     readingTime: "7 min read",
     image: "/IMG-20260615-WA0057.jpg",
     category: "Admissions",
-    author: "Sree Sree Educational Society",
+    author: "SREE SREE Educational Society",
   },
   {
     slug: "state-board-vs-cbse-in-andhra-pradesh",
@@ -240,7 +324,7 @@ export const posts: PostMeta[] = [
     readingTime: "8 min read",
     image: "/IMG-20260615-WA0061.jpg",
     category: "School Choice",
-    author: "Sree Sree Educational Society",
+    author: "SREE SREE Educational Society",
   },
   {
     slug: "english-medium-vs-telugu-medium-school",
@@ -252,7 +336,7 @@ export const posts: PostMeta[] = [
     readingTime: "8 min read",
     image: "/IMG-20260615-WA0047.jpg",
     category: "School Choice",
-    author: "Sree Sree Educational Society",
+    author: "SREE SREE Educational Society",
   },
   {
     slug: "school-fees-in-eluru-what-to-compare",
@@ -264,7 +348,7 @@ export const posts: PostMeta[] = [
     readingTime: "7 min read",
     image: "/IMG-20260615-WA0051.jpg",
     category: "Admissions Guide",
-    author: "Sree Sree Educational Society",
+    author: "SREE SREE Educational Society",
   },
   {
     slug: "how-to-choose-the-best-school-in-eluru",
@@ -276,19 +360,19 @@ export const posts: PostMeta[] = [
     readingTime: "8 min read",
     image: "/IMG-20260615-WA0047.jpg",
     category: "Admissions Guide",
-    author: "Sree Sree Educational Society",
+    author: "SREE SREE Educational Society",
   },
   {
     slug: "sree-sree-school-admissions-guide",
-    title: "How to Get Admission at Sree Sree School: A Simple Guide for Parents",
+    title: "How to Get Admission at SREE SREE School: A Simple Guide for Parents",
     description:
-      "Thinking about admission for your child? Here's a warm, straightforward walkthrough of how admissions work at Sree Sree Educational Society in Eluru — what to bring, what to expect, and how to reach us.",
+      "Thinking about admission for your child? Here's a warm, straightforward walkthrough of how admissions work at SREE SREE Educational Society in Eluru — what to bring, what to expect, and how to reach us.",
     date: "2026-06-24",
     dateLabel: "June 24, 2026",
     readingTime: "6 min read",
     image: "/IMG-20260618-WA0046.jpg",
     category: "Admissions",
-    author: "Sree Sree Educational Society",
+    author: "SREE SREE Educational Society",
   },
   {
     slug: "best-school-with-ethics-in-eluru",
@@ -300,7 +384,7 @@ export const posts: PostMeta[] = [
     readingTime: "6 min read",
     image: "/IMG-20260615-WA0048.jpg",
     category: "Ethics & Values",
-    author: "Sree Sree Educational Society",
+    author: "SREE SREE Educational Society",
   },
   {
     slug: "why-morning-yoga-belongs-in-school",
@@ -312,31 +396,31 @@ export const posts: PostMeta[] = [
     readingTime: "5 min read",
     image: "/IMG-20260615-WA0046.jpg",
     category: "Wellbeing",
-    author: "Sree Sree Educational Society",
+    author: "SREE SREE Educational Society",
   },
   {
     slug: "beyond-the-classroom-co-curricular-activities",
     title: "Chess, Karate and Robotics: Why Life Beyond the Classroom Matters",
     description:
-      "The lessons that shape a child often happen outside the textbook. Here's why co-curricular activities — chess, karate, robotics, sports and the arts — are a real part of learning at Sree Sree, not an afterthought.",
+      "The lessons that shape a child often happen outside the textbook. Here's why co-curricular activities — chess, karate, robotics, sports and the arts — are a real part of learning at SREE SREE, not an afterthought.",
     date: "2026-06-23",
     dateLabel: "June 23, 2026",
     readingTime: "5 min read",
     image: "/IMG-20260615-WA0064.jpg",
     category: "Beyond the Classroom",
-    author: "Sree Sree Educational Society",
+    author: "SREE SREE Educational Society",
   },
   {
     slug: "a-day-in-the-life-at-sree-sree-school",
-    title: "A Day in the Life at Sree Sree: From the Morning Bell to the Last Goodbye",
+    title: "A Day in the Life at SREE SREE: From the Morning Bell to the Last Goodbye",
     description:
-      "Ever wonder what a school day actually feels like for your child? Walk with us through one ordinary, wonderful day at Sree Sree Educational Society in Eluru.",
+      "Ever wonder what a school day actually feels like for your child? Walk with us through one ordinary, wonderful day at SREE SREE Educational Society in Eluru.",
     date: "2026-06-27",
     dateLabel: "June 27, 2026",
     readingTime: "6 min read",
     image: "/IMG-20260614-WA0033.jpg",
     category: "School Life",
-    author: "Sree Sree Educational Society",
+    author: "SREE SREE Educational Society",
   },
   {
     slug: "preparing-your-child-for-first-day-of-school",
@@ -348,7 +432,7 @@ export const posts: PostMeta[] = [
     readingTime: "5 min read",
     image: "/IMG-20260615-WA0057.jpg",
     category: "Early Years",
-    author: "Sree Sree Educational Society",
+    author: "SREE SREE Educational Society",
   },
   {
     slug: "raising-honest-kind-children",
@@ -360,7 +444,7 @@ export const posts: PostMeta[] = [
     readingTime: "6 min read",
     image: "/IMG-20260615-WA0049.jpg",
     category: "Parenting & Values",
-    author: "Sree Sree Educational Society",
+    author: "SREE SREE Educational Society",
   },
   {
     slug: "why-holistic-education-matters",
@@ -372,19 +456,19 @@ export const posts: PostMeta[] = [
     readingTime: "7 min read",
     image: "/IMG-20260615-WA0061.jpg",
     category: "Learning & Values",
-    author: "Sree Sree Educational Society",
+    author: "SREE SREE Educational Society",
   },
   {
     slug: "38-years-of-educational-excellence-in-eluru",
-    title: "38 Years of Educational Excellence in Eluru: The Sree Sree Story",
+    title: "38 Years of Educational Excellence in Eluru: The SREE SREE Story",
     description:
-      "From a small language academy in 1987 to a trusted school for 10,000+ students — the story of Sree Sree Educational Society and the values that built a 38-year legacy in Eluru.",
+      "From a small language academy in 1987 to a trusted school for 10,000+ students — the story of SREE SREE Educational Society and the values that built a 38-year legacy in Eluru.",
     date: "2026-06-25",
     dateLabel: "June 25, 2026",
     readingTime: "6 min read",
     image: "/IMG-20260615-WA0051.jpg",
     category: "Our Story",
-    author: "Sree Sree Educational Society",
+    author: "SREE SREE Educational Society",
   },
 ];
 

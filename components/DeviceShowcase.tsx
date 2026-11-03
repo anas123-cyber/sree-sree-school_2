@@ -147,7 +147,7 @@ export default function DeviceShowcase() {
           <div className="h-px w-12 bg-accent" />
         </div>
         <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-3">
-          Step inside <span className="text-accent">Sree Sree</span>
+          Step inside <span className="text-accent">SREE SREE</span>
         </h2>
         <p className="text-gray-600 max-w-2xl mx-auto mb-12">
           Take a look at life on our campus — classrooms, labs, the playground and the moments that
@@ -160,7 +160,7 @@ export default function DeviceShowcase() {
             <div className="relative rounded-[0.9rem] border-[6px] border-slate-800 bg-slate-800 shadow-2xl">
               <div className="absolute top-1 left-1/2 z-20 h-1 w-12 -translate-x-1/2 rounded-full bg-slate-700" />
               <div className="relative aspect-video overflow-hidden rounded-[0.45rem]">
-                <Screen poster="/logo.jpg" posterAlt="Sree Sree Educational Society logo" contain />
+                <Screen poster="/logo.jpg" posterAlt="SREE SREE Educational Society logo" contain />
               </div>
             </div>
             {/* Laptop base */}
@@ -175,7 +175,7 @@ export default function DeviceShowcase() {
             <div className="relative rounded-[2.2rem] border-[6px] border-slate-900 bg-slate-900 shadow-2xl">
               <div className="absolute top-1.5 left-1/2 z-20 h-4 w-20 -translate-x-1/2 rounded-full bg-slate-900" />
               <div className="relative aspect-[9/19] overflow-hidden rounded-[1.7rem]">
-                <Screen poster="/logo.jpg" posterAlt="Sree Sree Educational Society logo" contain />
+                <Screen poster="/logo.jpg" posterAlt="SREE SREE Educational Society logo" contain />
               </div>
               <div className="absolute -right-[8px] top-24 h-12 w-[3px] rounded-r bg-slate-700" />
               <div className="absolute -left-[8px] top-20 h-8 w-[3px] rounded-l bg-slate-700" />

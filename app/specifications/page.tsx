@@ -10,7 +10,7 @@ import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
 export const metadata = pageMetadata({
   title: "Campus Facilities & Specifications",
   description:
-    "Modern classrooms, a fully equipped computer lab, science labs and a spacious playground — explore the facilities at Sree Sree Educational Society, Eluru.",
+    "Modern classrooms, a fully equipped computer lab, science labs and a spacious playground — explore the facilities at SREE SREE Educational Society, Eluru.",
   path: "/specifications",
 });
 
@@ -24,7 +24,7 @@ export default function Specifications() {
             { name: "Specifications", path: "/specifications" },
           ]),
           webPageSchema({
-            title: "Campus Facilities at Sree Sree School, Eluru",
+            title: "Campus Facilities at SREE SREE School, Eluru",
             description:
               "Classrooms, computer and science labs, and a spacious playground.",
             path: "/specifications",

@@ -88,7 +88,7 @@ export default function Footer() {
               <div className="flex items-start gap-3">
                 <MapPin className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
                 <div>
-                  <h4 className="font-bold text-sm mb-1">Sree Sree Educational Society</h4>
+                  <h4 className="font-bold text-sm mb-1">SREE SREE Educational Society</h4>
                   <p className="text-xs text-gray-600 leading-relaxed">
                     Sriram Nagar 10th Road, Sanivarapupeta,<br />
                     Eluru, Andhra Pradesh 534003
@@ -101,7 +101,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-gray-500">
-            © 2025 Sree Sree Educational Society. All rights reserved.
+            © 2025 SREE SREE Educational Society. All rights reserved.
           </p>
           <p className="text-sm text-gray-500 italic">
             Crafted with care for excellence in education.

@@ -18,7 +18,7 @@ const testimonials = [
   },
   {
     quote:
-      "Choosing Sree Sree was the best decision for our family. The caring environment, dedicated educators, and genuine attention to each student's growth have exceeded all our expectations. Our daughter looks forward to school every single day.",
+      "Choosing SREE SREE was the best decision for our family. The caring environment, dedicated educators, and genuine attention to each student's growth have exceeded all our expectations. Our daughter looks forward to school every single day.",
     name: "Anitha S",
     role: "Parent",
   },

@@ -12,7 +12,7 @@ import { posts } from "@/lib/posts";
 export const metadata = pageMetadata({
   title: "Blog — School Tips, Admissions & Parenting in Eluru",
   description:
-    "Guides and stories from Sree Sree Educational Society, Eluru — how to choose a school, why holistic education matters, admissions advice and more for parents.",
+    "Guides and stories from SREE SREE Educational Society, Eluru — how to choose a school, why holistic education matters, admissions advice and more for parents.",
   path: "/blog",
 });
 
@@ -21,7 +21,7 @@ const blogSchema = {
   "@context": "https://schema.org",
   "@type": "Blog",
   "@id": `${SITE_URL}/blog#blog`,
-  name: "Sree Sree Educational Society Blog",
+  name: "SREE SREE Educational Society Blog",
   description:
     "Guides and stories on schooling, admissions and holistic education in Eluru.",
   url: `${SITE_URL}/blog`,
@@ -62,8 +62,8 @@ export default function BlogIndex() {
           </nav>
           <TextReveal
             as="h1"
-            text="The Sree Sree Blog"
-            highlight={["Sree Sree"]}
+            text="The SREE SREE Blog"
+            highlight={["SREE SREE"]}
             className="text-4xl md:text-5xl font-serif font-bold text-white mb-4"
           />
           <p className="text-gray-300 max-w-2xl mx-auto">
@@ -103,8 +103,8 @@ export default function BlogIndex() {
       </Reveal>
 
       {/* Rest of posts */}
-      <Reveal>
-        <section className="max-w-6xl mx-auto px-4 py-14 sm:py-20">
+      {/* Not wrapped in <Reveal>: the grid is taller than the viewport, so Reveal's 10% intersection threshold never fires and the cards stay invisible. */}
+      <section className="max-w-6xl mx-auto px-4 py-14 sm:py-20">
           <div className="grid sm:grid-cols-2 gap-8">
             {rest.map((p) => (
               <Link
@@ -134,8 +134,7 @@ export default function BlogIndex() {
               </Link>
             ))}
           </div>
-        </section>
-      </Reveal>
+      </section>
     </>
   );
 }

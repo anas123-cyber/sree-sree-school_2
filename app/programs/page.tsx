@@ -75,7 +75,7 @@ import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
 export const metadata = pageMetadata({
   title: "Co-curricular Activities — Robotics, Karate, Chess & Sports",
   description:
-    "Beyond the classroom: robotics & AI, karate, chess, sports and ethical classes that build skills, discipline and confidence at Sree Sree School, Eluru.",
+    "Beyond the classroom: robotics & AI, karate, chess, sports and ethical classes that build skills, discipline and confidence at SREE SREE School, Eluru.",
   path: "/programs",
 });
 
@@ -89,7 +89,7 @@ export default function Programs() {
             { name: "Co-curricular Activities", path: "/programs" },
           ]),
           webPageSchema({
-            title: "Co-curricular Activities at Sree Sree School, Eluru",
+            title: "Co-curricular Activities at SREE SREE School, Eluru",
             description:
               "Robotics & AI, karate, chess, sports and ethical classes beyond the classroom.",
             path: "/programs",

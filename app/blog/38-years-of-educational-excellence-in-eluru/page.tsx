@@ -12,8 +12,8 @@ export const metadata = pageMetadata({
   image: post.image,
   article: true,
   keywords: [
-    "Sree Sree Educational Society",
-    "Sree Sree School Eluru history",
+    "SREE SREE Educational Society",
+    "SREE SREE School Eluru history",
     "oldest school in Eluru",
     "trusted school Eluru",
     "Dr M.B.S. Sarma",
@@ -25,7 +25,7 @@ export default function Page() {
   return (
     <ArticleLayout slug={post.slug}>
       <p>
-        Every great institution begins with a single conviction. For Sree Sree
+        Every great institution begins with a single conviction. For SREE SREE
         Educational Society, that conviction — that education should build{" "}
         <strong>character as much as competence</strong> — has guided us for more than
         38 years. This is the story of how a small language academy in Eluru grew into a
@@ -35,7 +35,7 @@ export default function Page() {
       <h2>1987: A vision takes root</h2>
       <p>
         It began in 1987, when <strong>Dr. M.B.S. Sarma</strong> founded{" "}
-        <em>Sree Sree Academy of Languages</em> in Eluru with a simple but ambitious aim:
+        <em>SREE SREE Academy of Languages</em> in Eluru with a simple but ambitious aim:
         to deliver quality education rooted in strong values. A scholar with degrees in
         Yoga Spiritual Science and English, Dr. Sarma believed that real education must
         nurture the mind, the body and the spirit together — a philosophy that still
@@ -45,7 +45,7 @@ export default function Page() {
       <h2>1989: The Society is established</h2>
       <p>
         Two years later, in 1989, that vision was formalised with the registration of{" "}
-        <strong>Sree Sree Educational Society</strong>. This laid the foundation for a
+        <strong>SREE SREE Educational Society</strong>. This laid the foundation for a
         legacy of academic distinction and holistic development — and the structure that
         would let the institution grow well beyond its language-academy beginnings.
       </p>
@@ -77,7 +77,7 @@ export default function Page() {
 
       <h2>What has stayed the same</h2>
       <p>
-        The world has changed enormously since 1987 — but the heart of Sree Sree has not.
+        The world has changed enormously since 1987 — but the heart of SREE SREE has not.
         We still believe that the best education balances academics with discipline,
         values and creative expression. We still begin the day with{" "}
         <Link href="/academics">Yoga and Pranayama</Link>. And we still treat every child
@@ -90,7 +90,7 @@ export default function Page() {
 
       <h2>Looking ahead</h2>
       <p>
-        As we move forward, Sree Sree continues to add modern programs — from{" "}
+        As we move forward, SREE SREE continues to add modern programs — from{" "}
         <Link href="/programs">robotics and AI to chess and karate</Link> — while staying
         anchored to the values that built our reputation. The goal remains exactly what it
         was on day one: to prepare confident, capable, good-hearted young people for life.
@@ -98,7 +98,7 @@ export default function Page() {
 
       <h2>Be part of the next chapter</h2>
       <p>
-        For 38 years, families across Eluru have made Sree Sree part of their story. If
+        For 38 years, families across Eluru have made SREE SREE part of their story. If
         you would like your child to be part of the next chapter, admissions are open.{" "}
         <Link href="/contact">Visit our campus or send an enquiry</Link> — we&rsquo;d love
         to welcome you.

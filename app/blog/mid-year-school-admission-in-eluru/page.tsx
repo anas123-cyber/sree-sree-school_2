@@ -27,7 +27,7 @@ const faqs = [
   {
     question: "Can I get admission for my child mid-year in Eluru?",
     answer:
-      "Yes. Schools in Eluru, including Sree Sree Educational Society, accept mid-year admissions across grades subject to seat availability. You will need a Transfer Certificate from the previous school, recent report cards, the birth certificate and Aadhaar, and usually a short interaction so the school can place your child correctly.",
+      "Yes. Schools in Eluru, including SREE SREE Educational Society, accept mid-year admissions across grades subject to seat availability. You will need a Transfer Certificate from the previous school, recent report cards, the birth certificate and Aadhaar, and usually a short interaction so the school can place your child correctly.",
   },
   {
     question: "What documents are needed for a mid-year school transfer?",
@@ -192,7 +192,7 @@ export default function Page() {
 
       <h2>If you&rsquo;re considering us</h2>
       <p>
-        Admissions at Sree Sree are open across grades, including mid-year, subject to seats.
+        Admissions at SREE SREE are open across grades, including mid-year, subject to seats.
         We&rsquo;ll want to meet your child, understand what wasn&rsquo;t working, and be
         honest with you about whether we&rsquo;re the right fit — sometimes we&rsquo;ve told
         parents to stay where they are, and meant it.

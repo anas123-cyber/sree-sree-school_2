@@ -32,7 +32,7 @@ export default function Page() {
         <em>beyond</em> the classroom.
       </p>
       <p>
-        At Sree Sree, we&rsquo;ve never treated <Link href="/programs">co-curricular
+        At SREE SREE, we&rsquo;ve never treated <Link href="/programs">co-curricular
         activities</Link> as a reward for finishing the &ldquo;real&rdquo; work. They <em>are</em>{" "}
         real work — just the kind that builds the parts of a child a test can&rsquo;t reach.
       </p>

@@ -96,7 +96,7 @@ export default function Page() {
       </p>
       <p>
         If your child is starting school soon and you&rsquo;d like to see where they&rsquo;ll
-        spend their days, we&rsquo;d love to show you around Sree Sree.{" "}
+        spend their days, we&rsquo;d love to show you around SREE SREE.{" "}
         <Link href="/about">Learn a little about us</Link> or{" "}
         <Link href="/contact">come and visit</Link> — the first hello is always the nicest part.
       </p>

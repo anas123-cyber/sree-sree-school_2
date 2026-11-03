@@ -16,13 +16,13 @@ import { faqSchema, webPageSchema } from "@/lib/schema";
 import { homeFaqs } from "@/lib/faqs";
 
 export const metadata = pageMetadata({
-  title: "Best School in Eluru | Sree Sree Educational Society (Since 1987)",
+  title: "Best School in Eluru | SREE SREE Educational Society (Since 1987)",
   description:
-    "Sree Sree Educational Society is a leading holistic school in Eluru, Andhra Pradesh since 1987 — Primary & High School (Grades I–X) with Yoga, sports and value-based learning. Admissions open. Call 08812-244084.",
+    "SREE SREE Educational Society is a leading holistic school in Eluru, Andhra Pradesh since 1987 — Primary & High School (Grades I–X) with Yoga, sports and value-based learning. Admissions open. Call 08812-244084.",
   path: "/",
   keywords: [
     "best school in Eluru",
-    "Sree Sree Educational Society",
+    "SREE SREE Educational Society",
     "schools in Eluru Andhra Pradesh",
     "holistic school Eluru",
     "school admissions Eluru",
@@ -35,7 +35,7 @@ export default function Home() {
       <JsonLd
         data={[
           webPageSchema({
-            title: "Sree Sree Educational Society | Best School in Eluru",
+            title: "SREE SREE Educational Society | Best School in Eluru",
             description:
               "Holistic, values-based school in Eluru, Andhra Pradesh since 1987.",
             path: "/",
@@ -130,7 +130,7 @@ export default function Home() {
                 className="text-4xl font-serif font-bold text-primary mb-6"
               />
               <p className="text-gray-600 leading-relaxed mb-6">
-                Founded in 1987, Sree Sree Educational Society has been at the forefront of providing holistic, values-based education. 
+                Founded in 1987, SREE SREE Educational Society has been at the forefront of providing holistic, values-based education. 
                 Our institution blends traditional wisdom with modern pedagogical methods to nurture well-rounded individuals.
               </p>
               <Link href="/about" className="inline-flex items-center gap-2 text-primary font-semibold hover:text-accent transition-colors">
@@ -284,7 +284,7 @@ export default function Home() {
             <div className="text-center mb-12">
               <div className="flex items-center justify-center gap-4 mb-2">
                 <div className="h-px w-12 bg-accent" />
-                <span className="text-accent font-bold uppercase tracking-wider text-sm">Why Sree Sree</span>
+                <span className="text-accent font-bold uppercase tracking-wider text-sm">Why SREE SREE</span>
                 <div className="h-px w-12 bg-accent" />
               </div>
               <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary">
@@ -319,7 +319,7 @@ export default function Home() {
       {/* FAQ Section — answer-engine optimized (AEO) */}
       <FAQSection
         faqs={homeFaqs}
-        heading="Questions parents ask about Sree Sree School"
+        heading="Questions parents ask about SREE SREE School"
       />
 
       {/* CTA Section */}

@@ -99,14 +99,14 @@ export default function Page() {
       <p>
         Every year the syllabus grows and the days feel fuller. It would be easy to quietly
         drop the morning practice to buy back some time. We won&rsquo;t. Yoga and Pranayama
-        have been part of Sree Sree since the beginning — our founder built the school on
+        have been part of SREE SREE since the beginning — our founder built the school on
         the belief that a child&rsquo;s mind, body and spirit have to grow together. Decades
         later, watching our students, we&rsquo;re more convinced than ever that he was right.
       </p>
       <p>
         If you&rsquo;d like your child to start their days this way, we&rsquo;d love to show
         you around. Come see a morning at{" "}
-        <Link href="/about">Sree Sree Educational Society</Link> in Eluru — the quiet part is
+        <Link href="/about">SREE SREE Educational Society</Link> in Eluru — the quiet part is
         our favourite. <Link href="/contact">Get in touch to visit.</Link>
       </p>
     </ArticleLayout>

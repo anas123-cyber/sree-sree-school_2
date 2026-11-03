@@ -19,7 +19,7 @@ export const metadata = pageMetadata({
     "Grade 6 to 10 school admission",
     "SSC Grade 10 preparation",
     "high school admission Andhra Pradesh",
-    "Sree Sree School high school",
+    "SREE SREE School high school",
   ],
 });
 
@@ -32,7 +32,7 @@ const faqs = [
   {
     question: "Which grades does high school cover in Andhra Pradesh?",
     answer:
-      "High school in Andhra Pradesh covers Grade VI to Grade X, ending with the Grade 10 board examination. Sree Sree Educational Society in Eluru offers High School from Grade VI to X alongside Primary School from Grade I to V.",
+      "High school in Andhra Pradesh covers Grade VI to Grade X, ending with the Grade 10 board examination. SREE SREE Educational Society in Eluru offers High School from Grade VI to X alongside Primary School from Grade I to V.",
   },
   {
     question: "Are Grades 6 to 8 important, or does only Grade 10 matter?",

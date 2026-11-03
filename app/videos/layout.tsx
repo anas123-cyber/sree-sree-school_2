@@ -7,7 +7,7 @@ import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
 export const metadata = pageMetadata({
   title: "Video Gallery — Events, Programs & Campus Life",
   description:
-    "Watch videos of events, programs and campus life at Sree Sree Educational Society, Eluru, Andhra Pradesh — see the school in action.",
+    "Watch videos of events, programs and campus life at SREE SREE Educational Society, Eluru, Andhra Pradesh — see the school in action.",
   path: "/videos",
 });
 
@@ -25,7 +25,7 @@ export default function VideosLayout({
             { name: "Videos", path: "/videos" },
           ]),
           webPageSchema({
-            title: "Video Gallery | Sree Sree Educational Society",
+            title: "Video Gallery | SREE SREE Educational Society",
             description:
               "Videos of events, programs and campus life at the school in Eluru.",
             path: "/videos",

@@ -108,7 +108,7 @@ export default function ArticleLayout({
               <div className="glow-blob bg-accent/40 w-60 h-60 -top-10 -right-8" />
               <div className="relative z-10">
                 <h2 className="text-2xl sm:text-3xl font-serif font-bold text-white mb-3">
-                  Considering Sree Sree School for your child?
+                  Considering SREE SREE School for your child?
                 </h2>
                 <p className="text-gray-300 mb-6 max-w-xl mx-auto">
                   Admissions are open. Visit our campus in Eluru or book a call with our team to learn more.

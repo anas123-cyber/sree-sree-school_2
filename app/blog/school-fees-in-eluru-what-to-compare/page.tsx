@@ -42,7 +42,7 @@ const faqs = [
   {
     question: "Can school fees be paid in instalments in Eluru?",
     answer:
-      "Many schools in Eluru, including Sree Sree Educational Society, accept fee payment in terms or instalments rather than one lump sum. Ask the office directly about the instalment schedule and whether any late-payment charge applies, and get the answer in writing.",
+      "Many schools in Eluru, including SREE SREE Educational Society, accept fee payment in terms or instalments rather than one lump sum. Ask the office directly about the instalment schedule and whether any late-payment charge applies, and get the answer in writing.",
   },
 ];
 
@@ -167,7 +167,7 @@ export default function Page() {
         <li>&ldquo;What is the refund position if we move cities mid-year?&rdquo;</li>
       </ol>
 
-      <h2>What we do at Sree Sree, and why</h2>
+      <h2>What we do at SREE SREE, and why</h2>
       <p>
         Our founder started this institution in 1987 with a plain conviction: a good
         education should not be reserved for families who can pay the most. Thirty-eight

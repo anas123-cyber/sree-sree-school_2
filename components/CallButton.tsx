@@ -6,7 +6,7 @@ export default function CallButton() {
   return (
     <a
       href="tel:+918812244084"
-      aria-label="Call Sree Sree Educational Society at 08812-244084"
+      aria-label="Call SREE SREE Educational Society at 08812-244084"
       title="Call us: 08812-244084"
       className="group fixed bottom-6 right-6 z-50 flex items-center"
     >

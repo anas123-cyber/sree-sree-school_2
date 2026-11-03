@@ -42,7 +42,7 @@ const faqs = [
   {
     question: "How can I check a school's safety arrangements in person?",
     answer:
-      "Visit on an ordinary working day rather than an admission day and ask the twelve questions above directly. Watch how easily children approach a teacher, check that stairs and corridors are dry and handrails are sound, and look at how the gate is managed at dispersal. Sree Sree Educational Society welcomes parents to visit and ask these questions between 9:00 AM and 5:00 PM, Monday to Saturday.",
+      "Visit on an ordinary working day rather than an admission day and ask the twelve questions above directly. Watch how easily children approach a teacher, check that stairs and corridors are dry and handrails are sound, and look at how the gate is managed at dispersal. SREE SREE Educational Society welcomes parents to visit and ask these questions between 9:00 AM and 5:00 PM, Monday to Saturday.",
   },
 ];
 

@@ -80,7 +80,7 @@ export default function Header() {
   const galleryActive = pathname === "/gallery" || pathname === "/videos";
 
   const navLinkClass = (active: boolean) =>
-    `nav-underline text-sm font-medium transition-colors hover:text-accent ${
+    `nav-underline whitespace-nowrap text-sm font-semibold transition-colors hover:text-accent ${
       active
         ? "text-accent nav-underline-active"
         : isScrolled ? "text-gray-700" : "text-primary"
@@ -93,7 +93,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link href="/" className="group flex items-center gap-3">
+          <Link href="/" className="group flex items-center gap-2 sm:gap-3 min-w-0">
             <div className="relative w-14 h-14 flex-shrink-0 transition-transform duration-300 group-hover:scale-105">
               <Image
                 src="/logo.jpg"
@@ -104,17 +104,20 @@ export default function Header() {
               />
             </div>
             <div className="block leading-none">
-              <h1 className="font-serif font-black text-[2.1rem] sm:text-[2.7rem] leading-none text-brand-red tracking-[-0.06em]">
-                Sree Sree
+              <h1
+                className="whitespace-nowrap font-black text-[1.55rem] min-[400px]:text-[1.9rem] sm:text-[2.2rem] min-[1200px]:text-[2.3rem] 2xl:text-[2.7rem] leading-none text-brand-red tracking-[-0.02em]"
+                style={{ fontFamily: '"Times New Roman", Times, serif' }}
+              >
+                SREE SREE
               </h1>
-              <p className="mt-0.5 text-[10px] sm:text-[11px] font-black uppercase tracking-[0.16em] sm:tracking-[0.24em] text-brand-blue">
+              <p className="mt-0.5 whitespace-nowrap text-[7px] min-[400px]:text-[8.5px] sm:text-[10px] lg:text-[11px] font-black uppercase tracking-[0.12em] min-[400px]:tracking-[0.16em] sm:tracking-[0.2em] lg:tracking-[0.24em] text-brand-blue">
                 Educational Society
               </p>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden min-[1200px]:flex items-center gap-4 2xl:gap-8">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -220,7 +223,7 @@ export default function Header() {
 
             <Link
               href="/contact"
-              className="group bg-accent text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-amber-600 transition-all duration-300 flex items-center gap-2 shadow-lg shadow-accent/20 hover:shadow-accent/40 hover:-translate-y-0.5"
+              className="group whitespace-nowrap flex-shrink-0 bg-accent text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-amber-600 transition-all duration-300 flex items-center gap-2 shadow-lg shadow-accent/20 hover:shadow-accent/40 hover:-translate-y-0.5"
             >
               Enroll Now
               <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -231,7 +234,7 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className={`md:hidden p-2 transition-colors ${isScrolled ? "text-gray-700" : "text-primary"}`}
+            className={`min-[1200px]:hidden p-2 transition-colors ${isScrolled ? "text-gray-700" : "text-primary"}`}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -241,13 +244,13 @@ export default function Header() {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white border-t border-gray-100 shadow-lg absolute w-full animate-fade-in-up max-h-[80vh] overflow-y-auto">
+        <div className="min-[1200px]:hidden bg-white border-t border-gray-100 shadow-lg absolute w-full animate-fade-in-up max-h-[80vh] overflow-y-auto">
           <div className="px-4 py-4 space-y-3">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`block py-2 text-sm font-medium ${
+                className={`block py-2 text-sm font-semibold ${
                   pathname === link.href ? "text-accent" : "text-gray-700"
                 }`}
                 onClick={() => setIsMenuOpen(false)}
@@ -260,7 +263,7 @@ export default function Header() {
             <div>
               <button
                 onClick={() => setMobileGalleryOpen((v) => !v)}
-                className={`flex w-full items-center justify-between py-2 text-sm font-medium ${
+                className={`flex w-full items-center justify-between py-2 text-sm font-semibold ${
                   galleryActive ? "text-accent" : "text-gray-700"
                 }`}
                 aria-expanded={mobileGalleryOpen}
@@ -291,7 +294,7 @@ export default function Header() {
             {/* Contact */}
             <Link
               href="/contact"
-              className={`block py-2 text-sm font-medium ${
+              className={`block py-2 text-sm font-semibold ${
                 pathname === "/contact" ? "text-accent" : "text-gray-700"
               }`}
               onClick={() => setIsMenuOpen(false)}
@@ -303,7 +306,7 @@ export default function Header() {
             <div>
               <button
                 onClick={() => setMobileProgramsOpen((v) => !v)}
-                className={`flex w-full items-center justify-between py-2 text-sm font-medium ${
+                className={`flex w-full items-center justify-between py-2 text-sm font-semibold ${
                   programsActive ? "text-accent" : "text-gray-700"
                 }`}
                 aria-expanded={mobileProgramsOpen}
